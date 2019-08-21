@@ -5,3 +5,10 @@ D:\VisualStudio\Sopelana.Marcos\Ejercicio_01\obj\Debug\Ejercicio_01.csprojAssemb
 D:\VisualStudio\Sopelana.Marcos\Ejercicio_01\obj\Debug\Ejercicio_01.csproj.CoreCompileInputs.cache
 D:\VisualStudio\Sopelana.Marcos\Ejercicio_01\obj\Debug\Ejercicio_01.exe
 D:\VisualStudio\Sopelana.Marcos\Ejercicio_01\obj\Debug\Ejercicio_01.pdb
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_01\bin\Debug\Ejercicio_01.exe.config
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_01\bin\Debug\Ejercicio_01.exe
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_01\bin\Debug\Ejercicio_01.pdb
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_01\obj\Debug\Ejercicio_01.csprojAssemblyReference.cache
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_01\obj\Debug\Ejercicio_01.csproj.CoreCompileInputs.cache
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_01\obj\Debug\Ejercicio_01.exe
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_01\obj\Debug\Ejercicio_01.pdb

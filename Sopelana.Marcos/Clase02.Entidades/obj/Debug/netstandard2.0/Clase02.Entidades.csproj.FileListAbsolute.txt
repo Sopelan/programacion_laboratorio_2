@@ -1,0 +1,9 @@
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Clase02.Entidades\bin\Debug\netstandard2.0\Clase02.Entidades.deps.json
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Clase02.Entidades\bin\Debug\netstandard2.0\Clase02.Entidades.dll
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Clase02.Entidades\bin\Debug\netstandard2.0\Clase02.Entidades.pdb
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Clase02.Entidades\obj\Debug\netstandard2.0\Clase02.Entidades.csproj.CoreCompileInputs.cache
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Clase02.Entidades\obj\Debug\netstandard2.0\Clase02.Entidades.AssemblyInfoInputs.cache
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Clase02.Entidades\obj\Debug\netstandard2.0\Clase02.Entidades.AssemblyInfo.cs
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Clase02.Entidades\obj\Debug\netstandard2.0\Clase02.Entidades.dll
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Clase02.Entidades\obj\Debug\netstandard2.0\Clase02.Entidades.pdb
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Clase02.Entidades\obj\Debug\netstandard2.0\Clase02.Entidades.csprojAssemblyReference.cache

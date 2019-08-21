@@ -1,0 +1,9 @@
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Mi_libreria\obj\Debug\netstandard2.0\Mi_libreria.csprojAssemblyReference.cache
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Mi_libreria\obj\Debug\netstandard2.0\Mi_libreria.csproj.CoreCompileInputs.cache
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Mi_libreria\obj\Debug\netstandard2.0\Mi_libreria.AssemblyInfoInputs.cache
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Mi_libreria\obj\Debug\netstandard2.0\Mi_libreria.AssemblyInfo.cs
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Mi_libreria\bin\Debug\netstandard2.0\Mi_libreria.deps.json
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Mi_libreria\bin\Debug\netstandard2.0\Mi_libreria.dll
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Mi_libreria\bin\Debug\netstandard2.0\Mi_libreria.pdb
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Mi_libreria\obj\Debug\netstandard2.0\Mi_libreria.dll
+D:\VisualStudio\programacion_laboratorio_2\Sopelana.Marcos\Mi_libreria\obj\Debug\netstandard2.0\Mi_libreria.pdb

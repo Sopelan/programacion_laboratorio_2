@@ -11,7 +11,7 @@ namespace Ejercicio_01
         static void Main(string[] args)
         {
             Console.Title = "Ejercicio 01";
-            Console.WriteLine("hola mundo");
+            //Console.WriteLine("hola mundo");
             /*string nombre = "marcos sopelana";
             int edad = 18;
             nombre = Console.ReadLine();
@@ -24,6 +24,7 @@ namespace Ejercicio_01
             int i;
             for(i = 0; i < 5; i++)
             {
+                Console.WriteLine("ingresar el numero {0}", i + 1);
                 num = int.Parse(Console.ReadLine());
                 suma = suma + num;
                 if (num > valorMaximo)
