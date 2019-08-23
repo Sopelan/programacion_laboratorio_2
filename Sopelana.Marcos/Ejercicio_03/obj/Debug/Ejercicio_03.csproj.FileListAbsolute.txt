@@ -1,0 +1,7 @@
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_03\bin\Debug\Ejercicio_03.exe.config
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_03\bin\Debug\Ejercicio_03.exe
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_03\bin\Debug\Ejercicio_03.pdb
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_03\obj\Debug\Ejercicio_03.csprojAssemblyReference.cache
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_03\obj\Debug\Ejercicio_03.csproj.CoreCompileInputs.cache
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_03\obj\Debug\Ejercicio_03.exe
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_03\obj\Debug\Ejercicio_03.pdb
