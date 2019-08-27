@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*Ingresar 5 números por consola, guardándolos en una variable escalar.Luego calcular y mostrar: el vvalor máximo, el valor 
+mínimo y el promedio.*/
 namespace Ejercicio_01
 {
     class Program
@@ -11,11 +12,6 @@ namespace Ejercicio_01
         static void Main(string[] args)
         {
             Console.Title = "Ejercicio 01";
-            //Console.WriteLine("hola mundo");
-            /*string nombre = "marcos sopelana";
-            int edad = 18;
-            nombre = Console.ReadLine();
-            Console.WriteLine("mi nombre es {0} y tengo {1}",nombre,edad);*/
             int num;
             int suma = 0;
             float promedio;

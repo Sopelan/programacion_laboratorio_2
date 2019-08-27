@@ -7,13 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_01", "Ejercicio_0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_02", "Ejercicio_02\Ejercicio_02.csproj", "{DA89A6EA-2A74-49DC-9087-1DB0D0746952}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase _02", "clase _02\Clase _02.csproj", "{0ABC4206-4C10-4F52-BD4E-91722F4561F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_02", "clase _02\Clase_02.csproj", "{0ABC4206-4C10-4F52-BD4E-91722F4561F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mi_libreria", "Mi_libreria\Mi_libreria.csproj", "{2ECB3185-E6EE-4B0E-98D7-00C91552A047}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase02.Entidades", "Clase02.Entidades\Clase02.Entidades.csproj", "{89C7240B-4639-4F41-95DB-2122DE5D37F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase_02.Entidades", "Clase02.Entidades\Clase_02.Entidades.csproj", "{89C7240B-4639-4F41-95DB-2122DE5D37F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_03", "Ejercicio_03\Ejercicio_03.csproj", "{61654F90-F2BA-4BDB-B69D-281648E0EE31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_03", "Clase_ 03\Clase_03.csproj", "{A8B4DC45-EE70-4928-8E15-52EF7C3C0003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_01", "Clase_01\Clase_01.csproj", "{EB1C5B22-CDB7-4962-BBEE-79B6666BF378}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{61654F90-F2BA-4BDB-B69D-281648E0EE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61654F90-F2BA-4BDB-B69D-281648E0EE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61654F90-F2BA-4BDB-B69D-281648E0EE31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B4DC45-EE70-4928-8E15-52EF7C3C0003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B4DC45-EE70-4928-8E15-52EF7C3C0003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B4DC45-EE70-4928-8E15-52EF7C3C0003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B4DC45-EE70-4928-8E15-52EF7C3C0003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB1C5B22-CDB7-4962-BBEE-79B6666BF378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1C5B22-CDB7-4962-BBEE-79B6666BF378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1C5B22-CDB7-4962-BBEE-79B6666BF378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1C5B22-CDB7-4962-BBEE-79B6666BF378}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
