@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clase_01.1", "clase_01.1\cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clase_01.2", "clase_01.2\clase_01.2.csproj", "{A51C4F16-6A02-46FB-9977-0D855BCFD31D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clase_02.1", "clase 02\clase_02.1.csproj", "{135CAF14-4340-407E-8D5D-FBF0908D8FD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversor", "Conversor\Conversor.csproj", "{78AA0772-9956-4783-8FA0-09DC4957B55D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A51C4F16-6A02-46FB-9977-0D855BCFD31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A51C4F16-6A02-46FB-9977-0D855BCFD31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A51C4F16-6A02-46FB-9977-0D855BCFD31D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{135CAF14-4340-407E-8D5D-FBF0908D8FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{135CAF14-4340-407E-8D5D-FBF0908D8FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{135CAF14-4340-407E-8D5D-FBF0908D8FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{135CAF14-4340-407E-8D5D-FBF0908D8FD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78AA0772-9956-4783-8FA0-09DC4957B55D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78AA0772-9956-4783-8FA0-09DC4957B55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78AA0772-9956-4783-8FA0-09DC4957B55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78AA0772-9956-4783-8FA0-09DC4957B55D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
