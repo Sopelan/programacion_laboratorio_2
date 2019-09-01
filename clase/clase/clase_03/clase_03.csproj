@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{135CAF14-4340-407E-8D5D-FBF0908D8FD1}</ProjectGuid>
+    <ProjectGuid>{2B631190-8AB9-434C-9AFD-2ACAFF195873}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>clase_02</RootNamespace>
-    <AssemblyName>clase 02</AssemblyName>
+    <RootNamespace>clase_03</RootNamespace>
+    <AssemblyName>clase_03</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,6 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calculador\calculador.csproj">
+      <Project>{793ddc12-4dcb-4c9f-a015-eb2b4a3cca23}</Project>
+      <Name>calculador</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Conversor\conversor.csproj">
       <Project>{78aa0772-9956-4783-8fa0-09dc4957b55d}</Project>
       <Name>conversor</Name>

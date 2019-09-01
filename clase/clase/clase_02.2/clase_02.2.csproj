@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{135CAF14-4340-407E-8D5D-FBF0908D8FD1}</ProjectGuid>
+    <ProjectGuid>{BC7C33A1-5E4C-4991-BA2F-127D14AB9DDB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>clase_02</RootNamespace>
-    <AssemblyName>clase 02</AssemblyName>
+    <RootNamespace>clase_02._2</RootNamespace>
+    <AssemblyName>clase_02.2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Conversor\conversor.csproj">
-      <Project>{78aa0772-9956-4783-8fa0-09dc4957b55d}</Project>
-      <Name>conversor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

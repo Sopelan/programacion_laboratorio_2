@@ -38,7 +38,34 @@ namespace Conversor
         }
         public static double BinarioDecimal(string num)
         {
-            return 1;
+            double conversor = 0;
+            double convert = Convert.ToDouble(num);
+            int j = 1;
+            int i = 0;
+            if (convert == 1)
+                return 1;
+            if (convert == 0)
+                return 0;
+            while (convert >= j)
+            {
+                j = j * 10;
+                i++;
+            }
+                
+            while(j > 1)
+            {
+                j /= 10;
+                i--;
+
+                if (convert >= j)
+                {
+                    conversor += Math.Pow(2, i);
+                    convert -= j;
+                }
+                
+            }
+
+            return conversor;
         }
       
     }
