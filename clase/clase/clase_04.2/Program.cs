@@ -20,18 +20,17 @@ Utilizar sobrecarga para agregar un nuevo método Sumar que realice las mismas a
 Probar el código.  
 Parte III 
 Generar una conversión explícita que retorne cantidadSumas.  
-///////Parte IV 
+Parte IV 
 1. Sobrecargar el operador + (suma) para que puedan sumar cantidadSumas y retornen un long con dicho valor. 
 2. Sobrecargar el operador | (pipe) para que retorne True si ambos sumadores tienen igual cantidadSumas. 
 Agregar un segundo objeto del tipo Sumador en el Main y probar el código.*/ ///
-/// </summary>
+
 namespace clase_04._2
 {
     class Program
     {
         static void Main(string[] args)
         {
-           
         }
     }
 }

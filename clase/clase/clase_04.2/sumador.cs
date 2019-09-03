@@ -32,5 +32,15 @@ namespace clase_04._2
         {
             return cantidadSumas;
         }
+        public static long operator + (int num , Sumador sum)
+        {
+            return sum.cantidadSumas + num;
+        }
+        public static bool operator |(Sumador sum , Sumador sum2)
+        {
+            if (sum.cantidadSumas == sum2.cantidadSumas)
+                return true;
+            return false;
+        }
     }
 }

@@ -21,16 +21,16 @@ namespace Ejercicio_06
             fin = Convert.ToInt32(Console.ReadLine());
             for (i = inicio; i <= fin; i++)
             {
-                if(inicio % 4 == 0)
+                if(i % 4 == 0)
                 {
-                    if (inicio % 400 == 0)
-                        Console.WriteLine(inicio);
-                    else if (inicio % 100 == 0)
+                    if (i % 400 == 0)
+                        Console.WriteLine(i);
+                    else if (i % 100 == 0)
                     {
 
                     }
                     else
-                        Console.WriteLine(inicio);
+                        Console.Write(i + " ");
                 }
             }
             Console.Read();
