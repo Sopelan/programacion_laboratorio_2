@@ -8,22 +8,35 @@ namespace Calculador
 {
     public class Calculado
     {
-        private static int acumulador;
-        static Calculado()
+        private int acumulador;
+        public Calculado()
         {
             acumulador = 0;
         }
-        public static void acumular(string num)
+        public Calculado(int num)
+        {
+            acumulador = num;
+        }
+        public Calculado(string num)
+        {
+            acumulador = (int)Class.BinarioDecimal(num);
+        }
+        public void acumular(string num)
         {
            acumulador += Convert.ToInt32(num);
         }
-        public static string getResultadoBinario()
+        public void acumular(int num)
+        {
+            acumulador += num;
+        }
+        public string getResultadoBinario()
         {
             return Convert.ToString(Class.EnteroBinario(acumulador));
         }
-        public static int getResultadoEntero()
+        public  int getResultadoEntero()
         {
             return acumulador;
         }
+
     }
 }

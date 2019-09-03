@@ -3,21 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Conversor;
 using Calculador;
-/*1. Crear una clase Calculador con las siguientes características:
-1. Contendrá un atributo de instancia y privado llamado acumulador : int
-Tendrá los siguientes métodos:
-    1. Calculador() constructor por defecto, el cual inicializará el acumulador = 0
-    2. acumular(string) : void recibirá un binario en formato ASCII y lo acumulará como entero en el atributo acumulador
-    3. getResultadoBinario() : string retornará la variable acumulador convertida a binario.
-    4. getResultadoEntero() : int retornará la variable acumulador.
-2. Siempre que se cargue un binario, deberá realizar la suma en Calculador a través del método acumular.
-3. Modificar el Main agregando la opción al menú para mostrar el resultado del cálculo en binario o entero según el usuario lo dedica.
-NOTAS:
-Reutilizar código siempre.
-Utilizar this siempre que correspond*/
-namespace clase_03
+using Conversor;
+/* Tomar como base la clase 3 [DESCARGAR]
+1. Agregar los siguientes métodos 
+    1. acumular(int) : void recibirá un entero y lo acumulará en acumulador 
+    2. Calculador (int) inicializará el acumulador con el valor recibido 
+    3. Calculador (string) inicializará el acumulador con el valor recibido. Este constructor no contendrá código y llamará al constructor del punto b. 
+2. Modificar el Main 
+    1. Siempre que se cargue un nuevo valor, deberá realizar la suma en Calculador. */
+namespace clase_04
 {
     class Program
     {
@@ -81,5 +76,6 @@ namespace clase_03
             }
             Console.ReadLine();
         }
-    }   
+
+    }
 }
