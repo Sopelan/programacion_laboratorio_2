@@ -15,10 +15,11 @@ namespace Ejercicio_07
         {
             DateTime date;
             DateTime now = DateTime.Now;
-            DateTime resta;
+            TimeSpan resta;
             Console.WriteLine("ingrese su fecha de nacimiento");
             date = Convert.ToDateTime(Console.ReadLine());
-            Console.WriteLine(date);
+            resta = now - date;
+            Console.WriteLine(resta.Days+ " dias de diferencia entra tu fecha de nacimiento y ahora");
             Console.Read();
         }
     }
