@@ -34,7 +34,32 @@ namespace ejercicio_2._1._9._1
                 case '9':
                     Console.WriteLine("es un numero");
                     break;
-               
+                case 'b': goto case 'z';
+                case 'c': goto case 'z';
+                case 'd': goto case 'z';
+                case 'f': goto case 'z';
+                case 'g': goto case 'z';
+                case 'h': goto case 'z';
+                case 'j': goto case 'z';
+                case 'k': goto case 'z';
+                case 'l': goto case 'z';
+                case 'm': goto case 'z';
+                case 'n': goto case 'z';
+                case 'p': goto case 'z';
+                case 'q': goto case 'z';
+                case 'r': goto case 'z';
+                case 's': goto case 'z';
+                case 't': goto case 'z';
+                case 'v': goto case 'z';
+                case 'w': goto case 'z';
+                case 'x': goto case 'z';
+                case 'y': goto case 'z';
+                case 'z':
+                    Console.WriteLine("es una consonante");
+                    break;
+                default:
+                    Console.WriteLine("no es un numero , ni una vocal ni una consonante");
+                    break;
                
             }
             Console.ReadLine();
