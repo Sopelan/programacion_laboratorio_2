@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DF43FFCB-E35E-4948-A177-DD2EB0C5FBAC}</ProjectGuid>
+    <ProjectGuid>{A08AD2B0-6383-4E30-9924-4103F7B05E85}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ejercicio_08</RootNamespace>
-    <AssemblyName>Ejercicio_08</AssemblyName>
+    <RootNamespace>Ejercicio_12</RootNamespace>
+    <AssemblyName>Ejercicio_12</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidarRespuesta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
