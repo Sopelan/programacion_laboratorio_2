@@ -90,9 +90,9 @@ namespace Clase._06.Entidades
             return -1;
 
         }
-        public static Paleta operator -(Paleta p ,Tempera t)
+        /*public static Paleta operator -(Paleta p ,Tempera t)
         {
             // si existe pero quita mas null;
-        }
+        }*/
     }
 }
