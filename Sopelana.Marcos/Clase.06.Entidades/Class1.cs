@@ -8,6 +8,7 @@ namespace Clase._06.Entidades
 {
     public class Tempera
     {
+        public int getCantidad { get { return cantidad; }set { cantidad = value; } }
         private ConsoleColor color;
         private string marca;
         private int cantidad;
@@ -19,18 +20,21 @@ namespace Clase._06.Entidades
         }
         private string mostrar()
         {
-            return "el color de la tempera es " + color + " la marca es " + marca + " y tiene " + cantidad;
+            return "el color de la tempera es " + this.color + " la marca es " + this.marca + " y tiene " + this.cantidad;
         }
         public static implicit operator string(Tempera t)
         {
-            return t.mostrar();
+            if(t != null)
+                return t.mostrar();
+            return "";
+                      
         }
         public static bool operator ==(Tempera t1 , Tempera t2)
         {
-            if (!object.Equals(t1, null) && (!object.Equals(t1, null)))
+            if (!object.Equals(t1, null) && (!object.Equals(t2, null)))
                 return ((t1.marca == t2.marca) && (t1.color == t2.color));
             else
-                if (object.Equals(t1, null) && (object.Equals(t1, null)))
+                if (object.Equals(t1, null) && (object.Equals(t2, null)))
                 return true;
                 else
                 return false;
@@ -57,6 +61,16 @@ namespace Clase._06.Entidades
                 
             }
             return t1;
+        }
+        public static Tempera operator -(Tempera t, int n)
+        {
+            if (t != null && t.cantidad > 1)
+            {
+                t.cantidad -= n;
+                return t;
+            }
+            return t;
+            
         }
     }
 }

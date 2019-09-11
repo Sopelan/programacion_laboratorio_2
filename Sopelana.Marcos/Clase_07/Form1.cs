@@ -6,7 +6,7 @@ namespace Clase_07
     public partial class Form1 : Form
     {
         private Paleta paleta;
-
+        int cantidad = 5;
         public Paleta Paletas
         {
             get { return paleta; }
@@ -29,15 +29,17 @@ namespace Clase_07
             form.ShowDialog();
             if (form.DialogResult == DialogResult.OK)
             {
+                this.listBox1.Items.Clear();
                 this.Paletas += form.Tempera_GetSet;
-                string temperaString = (string)form.Tempera_GetSet;
-                this.listBox1.Items.Add(temperaString);
+                string mensaje = (string)this.paleta;
+                this.listBox1.Items.Add(mensaje);
             }
         }
 
         private void paletaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Paletas = 5;
+            
+            this.Paletas = this.cantidad;
             this.groupBoxPaleta.Visible = true;
             this.paletaToolStripMenuItem.Enabled = false;
         }
@@ -53,6 +55,39 @@ namespace Clase_07
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form form = new form();
+            //form.MdiParent = this;
+            form.ShowDialog();
+            if (form.DialogResult == DialogResult.OK)
+            {
+                this.listBox1.Items.Clear();
+                this.Paletas += form.Tempera_GetSet;
+                string mensaje =(string) this.paleta;
+                this.listBox1.Items.Add(mensaje);
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            form form = new form();
+            form.ShowDialog();
+            if(form.DialogResult == DialogResult.OK)
+            {
+                this.listBox1.Items.Clear();
+                this.Paletas -= form.Tempera_GetSet;
+                string mensaje = (string)this.paleta;
+                this.listBox1.Items.Add(mensaje);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

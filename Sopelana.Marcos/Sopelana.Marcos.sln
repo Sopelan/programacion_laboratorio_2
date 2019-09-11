@@ -57,7 +57,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_14", "Ejercicio_1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_15(no terminado)", "Ejercicio_15\Ejercicio_15(no terminado).csproj", "{830245AB-1319-4618-B4FE-AE571DDE0960}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_07", "Clase_07\Clase_07.csproj", "{7B9AED19-1E00-48F7-BBD1-7B4C572727AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_07_y_08", "Clase_07\Clase_07_y_08.csproj", "{7B9AED19-1E00-48F7-BBD1-7B4C572727AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -26,10 +26,14 @@ namespace Clase._06.Entidades
         }
         private string Mostrar()
         {
+            int cantidad;
+            string men;
             string mensaje = "cantidad de colores " + this.cantidadMaximaColores;
             for (int i = 0; i < this.cantidadMaximaColores; i++)
             {
-                mensaje += "\n" + this.colores[i];
+                cantidad = i + 1;
+                men = (string)this.colores[i];
+                mensaje += "\n "+ cantidad + ". " + men;
             }
             return mensaje;
         }
@@ -53,18 +57,22 @@ namespace Clase._06.Entidades
         }
         public static Paleta operator +(Paleta p, Tempera t)
         {
-            int num = p.ObtenerLugarLbre();
-            if (p != t)
+            if((!Object.Equals(p,null)&& t != null))
             {
-                if(num != -1)
-                p.colores[num] = t;
-            }
-            else
-            {
-                for(int i = 0; i < p.cantidadMaximaColores; i++)
+                if (p != t)
                 {
-                        p.colores[i] += t;
+                    int num = p.ObtenerLugarLbre();
+                    if (num != -1)
+                    p.colores[num] = t;
                 }
+                else
+                {
+                    int num = buscar(p, t);
+                    if(num != -1)
+                    p.colores[num] += t;
+                
+                }
+                
             }
             return p;
         }
@@ -90,9 +98,31 @@ namespace Clase._06.Entidades
             return -1;
 
         }
-        /*public static Paleta operator -(Paleta p ,Tempera t)
+        public static Paleta operator -(Paleta p ,Tempera t)
         {
-            // si existe pero quita mas null;
-        }*/
+            int num = buscar(p, t);
+            //int c = p.colores[num].getCantidad;
+            if (p == t && p != null && t != null && num != -1)
+            {
+                if (p.colores[num].getCantidad > t.getCantidad)
+                    p.colores[num].getCantidad -= t.getCantidad;
+                else
+                    p.colores[num] = null;
+            }
+            return p;
+        }
+        public static int buscar(Paleta p , Tempera t)
+        {
+            if (p != null && t != null)
+            {
+                for (int i = 0; i<p.colores.Length; i++)
+                {
+                if (p.colores[i] == t)
+                     return i;
+                }
+                
+            }
+            return -1;
+        }
     }
 }
