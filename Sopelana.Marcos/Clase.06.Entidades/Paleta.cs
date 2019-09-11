@@ -8,6 +8,7 @@ namespace Clase._06.Entidades
 {
     public class Paleta
     {
+        public Tempera[] Temperas { get { return colores; } }
         private Tempera[] colores;
         private int cantidadMaximaColores;
         private Paleta() : this(5)

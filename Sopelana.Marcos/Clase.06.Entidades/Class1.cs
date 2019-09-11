@@ -8,6 +8,7 @@ namespace Clase._06.Entidades
 {
     public class Tempera
     {
+
         public int getCantidad { get { return cantidad; }set { cantidad = value; } }
         private ConsoleColor color;
         private string marca;

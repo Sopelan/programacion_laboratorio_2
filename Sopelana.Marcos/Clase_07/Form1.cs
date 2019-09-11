@@ -68,8 +68,15 @@ namespace Clase_07
             {
                 this.listBox1.Items.Clear();
                 this.Paletas += form.Tempera_GetSet;
-                string mensaje =(string) this.paleta;
-                this.listBox1.Items.Add(mensaje);
+                string mensaje;
+                for(int i = 0; i < cantidad; i++ )
+                {
+                    mensaje = paleta.Temperas[i];
+                    if (!Object.Equals(paleta.Temperas[i],null))
+                    this.listBox1.Items.Add(mensaje);
+                }
+                //string mensaje =(string) this.paleta;
+                //this.listBox1.Items.Add(mensaje);
 
             }
         }
