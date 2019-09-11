@@ -102,7 +102,7 @@ namespace Clase._06.Entidades
         {
             int num = buscar(p, t);
             //int c = p.colores[num].getCantidad;
-            if (p == t && p != null && t != null && num != -1)
+            if (p == t && (!Object.Equals(p,null) && t != null && num != -1))
             {
                 if (p.colores[num].getCantidad > t.getCantidad)
                     p.colores[num].getCantidad -= t.getCantidad;
@@ -113,7 +113,7 @@ namespace Clase._06.Entidades
         }
         public static int buscar(Paleta p , Tempera t)
         {
-            if (p != null && t != null)
+            if (!Object.Equals(p,null) && t != null)
             {
                 for (int i = 0; i<p.colores.Length; i++)
                 {
