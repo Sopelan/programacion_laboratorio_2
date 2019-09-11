@@ -24,12 +24,13 @@ namespace Clase_07
         public form()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             foreach (ConsoleColor c in Enum.GetValues(typeof(ConsoleColor)))
             {
                 this.color.Items.Add(c);
             }
             this.color.SelectedItem = ConsoleColor.Magenta;
-            color.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.color.DropDownStyle = ComboBoxStyle.DropDownList;
             
             
             
@@ -51,10 +52,10 @@ namespace Clase_07
         {
             
             ConsoleColor c =(ConsoleColor) this.color.SelectedItem;
-            this.tempera = new Tempera( c, this.Marca.Text , Convert.ToInt32(this.cantidad.Text));
+            this.tempera = new Tempera( c, this.Marca.Text , int.Parse(this.cantidad.Text));
             Close();
             MessageBox.Show(this.tempera);
-            
+            this.DialogResult = DialogResult.OK;
 
 
         }
@@ -62,6 +63,7 @@ namespace Clase_07
         private void cancelar_Click(object sender, EventArgs e)
         {
             Close();
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

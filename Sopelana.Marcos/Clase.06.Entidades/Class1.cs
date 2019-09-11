@@ -19,7 +19,7 @@ namespace Clase._06.Entidades
         }
         private string mostrar()
         {
-            return "el color de la tempera es " + color + " la marca es " + marca + "y tiene " + cantidad;
+            return "el color de la tempera es " + color + " la marca es " + marca + " y tiene " + cantidad;
         }
         public static implicit operator string(Tempera t)
         {
@@ -42,7 +42,11 @@ namespace Clase._06.Entidades
         }
         public static Tempera operator +(Tempera t , int n)
         {
-            t.cantidad += n;
+            if(t != null)
+            {
+                t.cantidad += n;
+            }
+            
             return t;
         }
         public static Tempera operator + (Tempera t1 , Tempera t2)

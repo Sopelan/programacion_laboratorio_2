@@ -19,26 +19,32 @@ namespace Clase_07
             this.IsMdiContainer = true;
             this.WindowState = FormWindowState.Maximized;
             this.groupBoxPaleta.Visible = false;
-            paleta = 5;
+            
         }
 
         private void temperaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             form form = new form();
-
             //form.MdiParent = this;
             form.ShowDialog();
-            this.paleta += form.Tempera_GetSet;
+            if (form.DialogResult == DialogResult.OK)
+            {
+                this.Paletas += form.Tempera_GetSet;
+                string temperaString = (string)form.Tempera_GetSet;
+                this.listBox1.Items.Add(temperaString);
+            }
         }
 
         private void paletaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Paletas = 5;
             this.groupBoxPaleta.Visible = true;
+            this.paletaToolStripMenuItem.Enabled = false;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-            this.listBox1.Items.Add(this.paleta);
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
