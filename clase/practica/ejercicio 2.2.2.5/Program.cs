@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+// Crea un programa que pida al usuario su identificador y su contraseña, y no le permita seguir hasta que introduzca como nombre "Pedro" y como contraseña "Peter".
+namespace ejercicio_2._2._2._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
