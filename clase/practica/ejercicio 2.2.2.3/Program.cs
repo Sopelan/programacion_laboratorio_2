@@ -10,6 +10,14 @@ namespace ejercicio_2._2._2._3
     {
         static void Main(string[] args)
         {
+            int num = 26;
+            do
+            {
+                if (num % 2 == 0)
+                    Console.WriteLine(num);
+                num--;
+            } while (num >= 10);
+            Console.Read();
         }
     }
 }

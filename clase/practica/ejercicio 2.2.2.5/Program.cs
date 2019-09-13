@@ -10,6 +10,17 @@ namespace ejercicio_2._2._2._5
     {
         static void Main(string[] args)
         {
+            string ind;
+            string con;
+            do
+            {
+                Console.WriteLine("Ingrese su identificador");
+                ind = Console.ReadLine();
+                Console.WriteLine("Ingrese su contraseña");
+                con = Console.ReadLine();
+            } while (ind != "Pedro" || con != "Peter");
+            Console.WriteLine("Identificador correcto y contraseña correctos");
+            Console.Read();
         }
     }
 }
