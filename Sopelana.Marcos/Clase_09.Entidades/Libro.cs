@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clase_09.Entidades
 {
-    class Libro
+    public class Libro
     {
         private string titulo;
         private string autor;
@@ -19,7 +19,7 @@ namespace Clase_09.Entidades
         {
             get { return this.autor; }
         }
-        public int CantidadPaginas
+        public int CantidadDePaginas
         {
             get
             {
@@ -41,21 +41,27 @@ namespace Clase_09.Entidades
             }
             set
             {
-                if(i < this.capitulos.Count)
+                if(i < this.capitulos.Count && i >= 0)
                     this.capitulos[i] = value;
                 else if(i >= this.capitulos.Count)
                 {
-                    this.capitulos = new List<Capitulo>(this.capitulos.Count + 1);
-                    this.capitulos[this.capitulos.Count] = value;
+                    int cantidad = this.capitulos.Count;
+                    this.capitulos = new List<Capitulo>(cantidad + 1);
+                    this.capitulos[cantidad] = value;
                 }
             }
         }
+        public int CantidadDeCapitulos
+        {
+            get { return this.capitulos.Count; }
+        }
+
 
         public Libro(string titulo , string autor)
         {
             this.titulo = titulo;
             this.autor = autor;
-            this.capitulos = new List<Capitulo>();
+            this.capitulos = new List<Capitulo>(2);
         }
 
 
