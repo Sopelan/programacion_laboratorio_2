@@ -40,7 +40,7 @@ namespace Clase_09.Entidades
         public static implicit operator Capitulo(string titulo)
         {
 
-            Capitulo c1 = new Capitulo(generadorDeNumeros.Next(1,65), titulo, generadorDeNumeros.Next(10,233));
+            Capitulo c1 = new Capitulo(Capitulo.generadorDeNumeros.Next(1,65), titulo, Capitulo.generadorDePaginas.Next(10,233));
            
             return c1;
         }

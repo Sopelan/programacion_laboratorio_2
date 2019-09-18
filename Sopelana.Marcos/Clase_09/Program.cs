@@ -17,7 +17,7 @@ namespace Clase_09
             Console.WriteLine(c1.Titulo);
             Console.WriteLine(c1.Paginas);
             
-            Console.Read();
+            
             Console.Clear();
             Libro miLibro = new Libro("C# al descubierto", "Joe Mayo");
             miLibro[0] = "Fundamentos Básicos de C#";

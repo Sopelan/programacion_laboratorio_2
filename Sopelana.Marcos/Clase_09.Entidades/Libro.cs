@@ -34,21 +34,28 @@ namespace Clase_09.Entidades
         {
             get
             {
-                if (i < this.capitulos.Count)
+                if (i < this.capitulos.Count && i>= 0)
                     return this.capitulos[i];
                 else
                     return null;
             }
             set
             {
-                if(i < this.capitulos.Count && i >= 0)
-                    this.capitulos[i] = value;
-                else if(i >= this.capitulos.Count)
+                if(i >= 0)
                 {
-                    int cantidad = this.capitulos.Count;
-                    this.capitulos = new List<Capitulo>(cantidad + 1);
-                    this.capitulos[cantidad] = value;
+                    if (i == this.capitulos.Count)
+                        this.capitulos.Add(value);
+                    else if (i < this.capitulos.Count)
+                        this.capitulos[i] = value;
                 }
+                //    if(i < this.capitulos.Count && i >= 0)
+                //    this.capitulos[i] = value;
+                //else if(i >= this.capitulos.Count)
+                //{
+                //    int cantidad = this.capitulos.Count;
+                //    this.capitulos = new List<Capitulo>(cantidad + 1);
+                //    this.capitulos[cantidad] = value;
+                //}
             }
         }
         public int CantidadDeCapitulos
@@ -61,7 +68,7 @@ namespace Clase_09.Entidades
         {
             this.titulo = titulo;
             this.autor = autor;
-            this.capitulos = new List<Capitulo>(2);
+            this.capitulos = new List<Capitulo>();
         }
 
 
