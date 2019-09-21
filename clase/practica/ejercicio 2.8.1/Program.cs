@@ -11,6 +11,32 @@ namespace ejercicio_2._8._1
     {
         static void Main(string[] args)
         {
+            Random numRandow = new Random();
+            int randow;
+            int num;
+            int intentos = 6;
+            randow = numRandow.Next(1,100);
+            while(intentos > 0)
+            {
+                Console.WriteLine("intentos: " + intentos);
+                Console.WriteLine("ingrese el numero");
+                num = Convert.ToInt32(Console.ReadLine());
+                if(randow == num)
+                {
+                    Console.WriteLine("es ese numero");
+                    break;
+                }
+                Console.WriteLine("no es ese numero\n reintentar");
+                Console.ReadLine();
+                intentos--;
+                Console.Clear();
+            }
+            if (intentos == 0)
+                Console.WriteLine("te quedaste sin intentos\nPerdiste");
+            else
+                Console.WriteLine("ganaste y te quedaron {0} intentos", intentos);
+            Console.ReadLine();
+
         }
     }
 }

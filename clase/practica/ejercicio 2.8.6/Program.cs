@@ -14,6 +14,28 @@ namespace ejercicio_2._8._6
     {
         static void Main(string[] args)
         {
+            int i;
+            int j;
+            int altura;
+            int ancho;
+            string rectangulo = "";
+            Console.WriteLine("ingrese la altura");
+            altura = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ingrese el ancho");
+            ancho = Convert.ToInt32(Console.ReadLine());
+            for(i = 0; i < altura; i++)
+            {
+                for(j = 0; j < ancho; j++)
+                {
+                    if (i == 0 || i == altura - 1 || j == 0 || j == ancho - 1)
+                        rectangulo += "*";
+                    else
+                        rectangulo += " ";
+                }
+                rectangulo += "\n";
+            }
+            Console.WriteLine(rectangulo);
+            Console.ReadLine();
         }
     }
 }

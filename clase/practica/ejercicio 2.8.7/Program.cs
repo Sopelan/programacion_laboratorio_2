@@ -14,6 +14,22 @@ namespace ejercicio_2._8._7
     {
         static void Main(string[] args)
         {
+            int ancho = 1;
+            int altura;
+            int i;
+            int j;
+            string rectangulo = "";
+            Console.WriteLine("ingrese la altura");
+            altura = Convert.ToInt32(Console.ReadLine());
+            for(i = 0; i < altura; i++)
+            {
+                for(j = 0; j < ancho; j++)
+                    rectangulo += "*";
+                rectangulo += "\n";
+                ancho++;
+            }
+            Console.WriteLine(rectangulo);
+            Console.Read();
         }
     }
 }

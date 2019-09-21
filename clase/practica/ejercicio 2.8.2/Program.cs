@@ -10,6 +10,20 @@ namespace ejercicio_2._8._2
     {
         static void Main(string[] args)
         {
+            int num;
+            int fact = 2;
+            Console.WriteLine("ingrese un numero");
+            num = Convert.ToInt32(Console.ReadLine());
+            while(num > 1)
+            {
+                while(num%fact == 0)
+                {
+                    num = num / fact;
+                    Console.WriteLine(fact);
+                }
+                fact++;
+            }
+            Console.Read();
         }
     }
 }

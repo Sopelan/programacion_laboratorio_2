@@ -10,6 +10,12 @@ namespace ejercicio_2._8._3
     {
         static void Main(string[] args)
         {
+            int num;
+            Console.WriteLine("ingrese un numero");
+            num = Convert.ToInt32(Console.ReadLine());
+            num = num * num;
+            Console.WriteLine("el numero multiplicado por si mismo es " + num);
+            Console.Read();
         }
     }
 }
