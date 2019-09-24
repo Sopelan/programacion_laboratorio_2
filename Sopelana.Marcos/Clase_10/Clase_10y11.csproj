@@ -71,6 +71,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAlumno.resx">
+      <DependentUpon>FrmAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCatedra.resx">
+      <DependentUpon>FrmCatedra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,9 +103,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Clase_10.Entidades\Clase_10.Entidades.csproj">
+    <ProjectReference Include="..\Clase_10.Entidades\Clase_10y11.Entidades.csproj">
       <Project>{fcef9e47-80d3-46a4-9214-22f21028a58e}</Project>
-      <Name>Clase_10.Entidades</Name>
+      <Name>Clase_10y11.Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

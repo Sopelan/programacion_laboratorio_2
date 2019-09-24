@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Clase_10
 {
     public partial class FrmPrincipal : Form
@@ -19,9 +11,20 @@ namespace Clase_10
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Salir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void crearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Catedra_Click(object sender, EventArgs e)
+        {
+            FrmCatedra frm = new FrmCatedra();
+            frm.Show();
         }
     }
 }

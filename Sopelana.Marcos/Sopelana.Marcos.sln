@@ -63,9 +63,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_09.Entidades", "Clase
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_09", "Clase_09\Clase_09.csproj", "{88CCFDD9-8B59-42DE-9642-432943113730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_10.Entidades", "Clase_10.Entidades\Clase_10.Entidades.csproj", "{FCEF9E47-80D3-46A4-9214-22F21028A58E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_10y11.Entidades", "Clase_10.Entidades\Clase_10y11.Entidades.csproj", "{FCEF9E47-80D3-46A4-9214-22F21028A58E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_10", "Clase_10\Clase_10.csproj", "{F02A98CE-FAB4-48F9-BFBE-FEDDE92FE7B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_10y11", "Clase_10\Clase_10y11.csproj", "{F02A98CE-FAB4-48F9-BFBE-FEDDE92FE7B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -53,6 +53,15 @@ namespace Clase_10.Entidades
                     return i;
             return -1;
         }
+        public override string ToString()
+        {
+            string mostrar = "";
+            for(int i = 0; i < alumnos.Count; i++)
+            {
+                mostrar += Alumno.Mostrar(alumnos[i]) + "\n";
+            }
+            return mostrar;
+        }
 
-     }
+    }
 }
