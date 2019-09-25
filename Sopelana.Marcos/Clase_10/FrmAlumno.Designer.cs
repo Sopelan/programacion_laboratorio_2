@@ -72,6 +72,7 @@
             this.apellido.Name = "apellido";
             this.apellido.Size = new System.Drawing.Size(211, 20);
             this.apellido.TabIndex = 3;
+            this.apellido.TextChanged += new System.EventHandler(this.apellido_TextChanged);
             // 
             // legajo
             // 
@@ -108,7 +109,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(39, 336);
+            this.button1.Location = new System.Drawing.Point(39, 434);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -118,7 +119,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(175, 336);
+            this.button2.Location = new System.Drawing.Point(175, 434);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
@@ -130,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 393);
+            this.ClientSize = new System.Drawing.Size(282, 469);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tipoExamen);
@@ -152,14 +153,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox nombre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox apellido;
-        private System.Windows.Forms.TextBox legajo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox tipoExamen;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.TextBox legajo;
+        public System.Windows.Forms.TextBox nombre;
+        public System.Windows.Forms.TextBox apellido;
+        public System.Windows.Forms.ComboBox tipoExamen;
     }
 }

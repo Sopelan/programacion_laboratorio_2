@@ -31,7 +31,7 @@ namespace Clase_10.Entidades
         }
         public static bool operator ==(Alumno a,Alumno b)
         {
-            if (!(Object.Equals(a, null)) && (Object.Equals(b, null)))
+            if (!(Object.Equals(a, null)) && !(Object.Equals(b, null)))
                 return (a.legajo == b.legajo);
             return false;
         }

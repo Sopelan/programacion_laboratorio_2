@@ -13,7 +13,7 @@ namespace Clase_10
     public partial class FrmAlumno : Form
     {
         private Alumno alum;
-        public Alumno Alum { get { return alum; } }
+        public Alumno Alum { get { return alum; }  set{ alum = value; } }
         public FrmAlumno()
         {
             InitializeComponent();
@@ -35,19 +35,25 @@ namespace Clase_10
 
         }
 
-        private void aceptar_Click(object sender, EventArgs e)
+        public virtual void aceptar_Click(object sender, EventArgs e)
         {
             ETipoExamen ti = (ETipoExamen)tipoExamen.SelectedItem;
             alum = new Alumno(nombre.Text, apellido.Text, Convert.ToInt32(legajo.Text),ti );
-            MessageBox.Show(Alumno.Mostrar(alum));
+           
            this.DialogResult = DialogResult.OK;
             Close();
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            Close();
+            
             this.DialogResult = DialogResult.Cancel;
+            Close();
+        }
+
+        private void apellido_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.calificar = new System.Windows.Forms.Button();
             this.modificar = new System.Windows.Forms.Button();
             this.lista = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ordenar = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.calificados = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -50,14 +50,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Agregar_Click);
             // 
-            // button2
+            // calificar
             // 
-            this.button2.Location = new System.Drawing.Point(290, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Calificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.calificar.Location = new System.Drawing.Point(290, 27);
+            this.calificar.Name = "calificar";
+            this.calificar.Size = new System.Drawing.Size(75, 23);
+            this.calificar.TabIndex = 1;
+            this.calificar.Text = "Calificar";
+            this.calificar.UseVisualStyleBackColor = true;
+            this.calificar.Click += new System.EventHandler(this.calificar_button);
             // 
             // modificar
             // 
@@ -67,20 +68,22 @@
             this.modificar.TabIndex = 2;
             this.modificar.Text = "Modificar";
             this.modificar.UseVisualStyleBackColor = true;
+            this.modificar.Click += new System.EventHandler(this.modificar_Click);
             // 
-            // listBox1
+            // lista
             // 
             this.lista.FormattingEnabled = true;
             this.lista.Location = new System.Drawing.Point(6, 56);
-            this.lista.Name = "listBox1";
+            this.lista.Name = "lista";
             this.lista.Size = new System.Drawing.Size(646, 212);
             this.lista.TabIndex = 3;
             this.lista.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lista.DoubleClick += new System.EventHandler(this.modificar_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.ordenar);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.calificar);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.lista);
             this.groupBox1.Controls.Add(this.modificar);
@@ -90,32 +93,36 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Alumnos";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // comboBox1
+            // ordenar
             // 
             this.ordenar.FormattingEnabled = true;
             this.ordenar.Location = new System.Drawing.Point(6, 274);
-            this.ordenar.Name = "comboBox1";
+            this.ordenar.Name = "ordenar";
             this.ordenar.Size = new System.Drawing.Size(646, 21);
             this.ordenar.TabIndex = 5;
+            this.ordenar.SelectedIndexChanged += new System.EventHandler(this.ordenar_SelectedIndexChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listBox2);
+            this.groupBox2.Controls.Add(this.calificados);
             this.groupBox2.Location = new System.Drawing.Point(65, 361);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(681, 300);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Alumnos Calificados";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // listBox2
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(18, 20);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(641, 277);
-            this.listBox2.TabIndex = 0;
+            this.calificados.FormattingEnabled = true;
+            this.calificados.Location = new System.Drawing.Point(18, 20);
+            this.calificados.Name = "listBox2";
+            this.calificados.Size = new System.Drawing.Size(641, 277);
+            this.calificados.TabIndex = 0;
+            this.calificados.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // FrmCatedra
             // 
@@ -135,12 +142,12 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button calificar;
         private System.Windows.Forms.Button modificar;
         private System.Windows.Forms.ListBox lista;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox ordenar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox calificados;
     }
 }

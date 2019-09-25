@@ -16,7 +16,7 @@ namespace Clase_10.Entidades
         }
         public static bool operator ==(Catedra c, Alumno a)
         {
-            if(!Object.Equals(c,null) && !(Object.Equals(a, null)))
+            if(!Object.Equals(c,null) && (!Object.Equals(a, null)))
             {
                 for(int i = 0;i<c.alumnos.Count;i++)
                     if (c.alumnos[i] == a)
