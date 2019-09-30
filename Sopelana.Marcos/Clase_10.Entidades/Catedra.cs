@@ -41,7 +41,8 @@ namespace Clase_10.Entidades
         {
             if(c == a)
             {
-                c.alumnos.Remove(a);
+                int index = a | c;
+                c.alumnos.RemoveAt(index);
                 return true;
             }
             return false;
