@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CentralitaPolimorfismo
+namespace Clase_13
 {
     class Program
     {
