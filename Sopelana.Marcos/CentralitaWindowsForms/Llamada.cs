@@ -21,7 +21,7 @@ namespace Clase_14
 
         protected virtual void btnAceptar_Click(object sender, EventArgs e)
         {
-
+            this.DialogResult = DialogResult.OK;
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)

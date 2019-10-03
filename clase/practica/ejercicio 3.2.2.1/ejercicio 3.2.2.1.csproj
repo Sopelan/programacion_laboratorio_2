@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0DF9C498-16C2-4E42-BE41-E62E4E87A05B}</ProjectGuid>
+    <ProjectGuid>{9C9FA3EE-6C50-471C-85AD-B856C61F490C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Clase_12</RootNamespace>
-    <AssemblyName>Clase_12</AssemblyName>
+    <RootNamespace>ejercicio_3._2._2._1</RootNamespace>
+    <AssemblyName>ejercicio 3.2.2.1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Clase_12y13.Entidades\Clase_12y14.Entidades.csproj">
-      <Project>{4f9c27af-bc71-47b3-ba58-7360c6b38709}</Project>
-      <Name>Clase_12y14.Entidades</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

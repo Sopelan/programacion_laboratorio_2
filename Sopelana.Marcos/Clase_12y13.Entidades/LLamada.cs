@@ -40,7 +40,7 @@ namespace Clase_12y14.Entidades
         }
         public static bool operator ==(Llamada uno, Llamada dos)
         {
-            if (!Object.Equals(uno, null) && Object.Equals(dos, null))
+            if (!Object.Equals(uno, null) && !Object.Equals(dos, null))
                 if (uno.Equals(dos))
                     if (uno.NroDestino == dos.NroDestino && uno.NroOrigen == dos.NroOrigen)
                         return true;

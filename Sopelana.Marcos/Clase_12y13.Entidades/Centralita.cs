@@ -10,9 +10,9 @@ namespace Clase_12y14.Entidades
     {
         private List<Llamada> _listadeLlamadas;
         protected string _razonSocial;
-        public float GananciaPorLocal { get; }
-        public float GananciaPorProvincial { get; }
-        public float GananciaTotal { get; }
+        public float GananciaPorLocal { get { return this.CalcularGanancias(tipoLlamada.Local); } }
+        public float GananciaPorProvincial { get { return this.CalcularGanancias(tipoLlamada.Provincial); } }
+        public float GananciaTotal { get { return this.CalcularGanancias(tipoLlamada.Todas); }}
         public List<Llamada> Llamadas { get { return _listadeLlamadas; } }
         private void AgregarLlamada(Llamada nuevaLlamada)
         {
@@ -21,13 +21,22 @@ namespace Clase_12y14.Entidades
         private float CalcularGanancias(tipoLlamada tipo)
         {
             float retornoProvincial = 0;
-            foreach(Llamada l in this._listadeLlamadas)
+            float retornoLocal = 0;
+            foreach (Llamada l in this._listadeLlamadas)
             {
-                
-                    
-            }
+                if (l is Local)
+                    retornoLocal += l.CostoLlamada;
+                else if (l is Provincial)
+                    retornoProvincial += l.CostoLlamada;
 
-            return;
+            }
+            if (tipo == tipoLlamada.Local)
+                return retornoLocal;
+            else if (tipo == tipoLlamada.Provincial)
+                return retornoProvincial;
+            else
+                return retornoLocal + retornoProvincial;
+            
         }
         public Centralita()
         {

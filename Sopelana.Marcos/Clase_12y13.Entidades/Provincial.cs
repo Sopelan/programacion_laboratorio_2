@@ -40,7 +40,8 @@ namespace Clase_12y14.Entidades
         protected override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine(base.Mostrar());
+            sb.Append(base.Mostrar());
+            sb.AppendLine("franja: " + this._franjaHoraria);
             sb.AppendLine("costo: " + this.CostoLlamada);
             return sb.ToString();
         }

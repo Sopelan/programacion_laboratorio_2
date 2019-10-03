@@ -42,11 +42,11 @@
   <ItemGroup>
     <Compile Include="Centralita.cs" />
     <Compile Include="Franja.cs" />
-    <Compile Include="LLamada.cs" />
+    <Compile Include="Llamada.cs" />
     <Compile Include="Local.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincial.cs" />
-    <Compile Include="TipoLLamada.cs" />
+    <Compile Include="TipoLlamada.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
