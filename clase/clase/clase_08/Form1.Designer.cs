@@ -28,156 +28,161 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblLegajo = new System.Windows.Forms.Label();
+            this.lblPuesto = new System.Windows.Forms.Label();
+            this.lblSueldos = new System.Windows.Forms.Label();
+            this.btnEmpresa = new System.Windows.Forms.Button();
+            this.btnLimpiarForm = new System.Windows.Forms.Button();
+            this.btnAgregarItem = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.rtxtConsola = new System.Windows.Forms.ListBox();
+            this.mtxtLegajo = new System.Windows.Forms.MaskedTextBox();
+            this.cmbPuesto = new System.Windows.Forms.ComboBox();
+            this.mtxtSalario = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(12, 24);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre";
             // 
-            // label2
+            // lblApellido
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(12, 49);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.TabIndex = 1;
+            this.lblApellido.Text = "Apellido";
             // 
-            // label3
+            // lblLegajo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.lblLegajo.AutoSize = true;
+            this.lblLegajo.Location = new System.Drawing.Point(12, 72);
+            this.lblLegajo.Name = "lblLegajo";
+            this.lblLegajo.Size = new System.Drawing.Size(39, 13);
+            this.lblLegajo.TabIndex = 2;
+            this.lblLegajo.Text = "Legajo";
             // 
-            // label4
+            // lblPuesto
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.lblPuesto.AutoSize = true;
+            this.lblPuesto.Location = new System.Drawing.Point(12, 96);
+            this.lblPuesto.Name = "lblPuesto";
+            this.lblPuesto.Size = new System.Drawing.Size(40, 13);
+            this.lblPuesto.TabIndex = 3;
+            this.lblPuesto.Text = "Puesto";
             // 
-            // label5
+            // lblSueldos
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 124);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
+            this.lblSueldos.AutoSize = true;
+            this.lblSueldos.Location = new System.Drawing.Point(12, 124);
+            this.lblSueldos.Name = "lblSueldos";
+            this.lblSueldos.Size = new System.Drawing.Size(58, 13);
+            this.lblSueldos.TabIndex = 4;
+            this.lblSueldos.Text = "Ganancias";
             // 
-            // button1
+            // btnEmpresa
             // 
-            this.button1.Location = new System.Drawing.Point(15, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 43);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEmpresa.Location = new System.Drawing.Point(15, 175);
+            this.btnEmpresa.Name = "btnEmpresa";
+            this.btnEmpresa.Size = new System.Drawing.Size(106, 43);
+            this.btnEmpresa.TabIndex = 5;
+            this.btnEmpresa.Text = "Empresa";
+            this.btnEmpresa.UseVisualStyleBackColor = true;
+            this.btnEmpresa.Click += new System.EventHandler(this.btnEmpresa_Click);
             // 
-            // button2
+            // btnLimpiarForm
             // 
-            this.button2.Location = new System.Drawing.Point(208, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 43);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLimpiarForm.Location = new System.Drawing.Point(208, 175);
+            this.btnLimpiarForm.Name = "btnLimpiarForm";
+            this.btnLimpiarForm.Size = new System.Drawing.Size(89, 43);
+            this.btnLimpiarForm.TabIndex = 6;
+            this.btnLimpiarForm.Text = "Limpiar";
+            this.btnLimpiarForm.UseVisualStyleBackColor = true;
+            this.btnLimpiarForm.Click += new System.EventHandler(this.btnLimpiarForm_Click);
             // 
-            // button3
+            // btnAgregarItem
             // 
-            this.button3.Location = new System.Drawing.Point(304, 175);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 43);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgregarItem.Location = new System.Drawing.Point(304, 175);
+            this.btnAgregarItem.Name = "btnAgregarItem";
+            this.btnAgregarItem.Size = new System.Drawing.Size(86, 43);
+            this.btnAgregarItem.TabIndex = 7;
+            this.btnAgregarItem.Text = "Agregar";
+            this.btnAgregarItem.UseVisualStyleBackColor = true;
+            this.btnAgregarItem.Click += new System.EventHandler(this.btnAgregarItem_Click);
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtNombre.Location = new System.Drawing.Point(163, 16);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(217, 20);
+            this.txtNombre.TabIndex = 0;
             // 
-            // textBox2
+            // txtApellido
             // 
-            this.textBox2.Location = new System.Drawing.Point(163, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtApellido.Location = new System.Drawing.Point(163, 42);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(217, 20);
+            this.txtApellido.TabIndex = 1;
             // 
-            // textBox3
+            // rtxtConsola
             // 
-            this.textBox3.Location = new System.Drawing.Point(97, 242);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 20);
-            this.textBox3.TabIndex = 10;
+            this.rtxtConsola.FormattingEnabled = true;
+            this.rtxtConsola.Location = new System.Drawing.Point(15, 268);
+            this.rtxtConsola.Name = "rtxtConsola";
+            this.rtxtConsola.Size = new System.Drawing.Size(375, 225);
+            this.rtxtConsola.TabIndex = 8;
             // 
-            // textBox4
+            // mtxtLegajo
             // 
-            this.textBox4.Location = new System.Drawing.Point(163, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(113, 20);
-            this.textBox4.TabIndex = 10;
+            this.mtxtLegajo.Location = new System.Drawing.Point(163, 68);
+            this.mtxtLegajo.Mask = "000-0000-00";
+            this.mtxtLegajo.Name = "mtxtLegajo";
+            this.mtxtLegajo.Size = new System.Drawing.Size(217, 20);
+            this.mtxtLegajo.TabIndex = 2;
             // 
-            // textBox5
+            // cmbPuesto
             // 
-            this.textBox5.Location = new System.Drawing.Point(163, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(217, 20);
-            this.textBox5.TabIndex = 11;
+            this.cmbPuesto.FormattingEnabled = true;
+            this.cmbPuesto.Location = new System.Drawing.Point(163, 96);
+            this.cmbPuesto.Name = "cmbPuesto";
+            this.cmbPuesto.Size = new System.Drawing.Size(217, 21);
+            this.cmbPuesto.TabIndex = 3;
             // 
-            // listBox1
+            // mtxtSalario
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(15, 268);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(375, 225);
-            this.listBox1.TabIndex = 12;
+            this.mtxtSalario.Location = new System.Drawing.Point(163, 124);
+            this.mtxtSalario.Name = "mtxtSalario";
+            this.mtxtSalario.Size = new System.Drawing.Size(134, 20);
+            this.mtxtSalario.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 504);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.mtxtSalario);
+            this.Controls.Add(this.cmbPuesto);
+            this.Controls.Add(this.mtxtLegajo);
+            this.Controls.Add(this.rtxtConsola);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.btnAgregarItem);
+            this.Controls.Add(this.btnLimpiarForm);
+            this.Controls.Add(this.btnEmpresa);
+            this.Controls.Add(this.lblSueldos);
+            this.Controls.Add(this.lblPuesto);
+            this.Controls.Add(this.lblLegajo);
+            this.Controls.Add(this.lblApellido);
+            this.Controls.Add(this.lblNombre);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -187,20 +192,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblLegajo;
+        private System.Windows.Forms.Label lblPuesto;
+        private System.Windows.Forms.Label lblSueldos;
+        private System.Windows.Forms.Button btnEmpresa;
+        private System.Windows.Forms.Button btnLimpiarForm;
+        private System.Windows.Forms.Button btnAgregarItem;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.ListBox rtxtConsola;
+        private System.Windows.Forms.MaskedTextBox mtxtLegajo;
+        private System.Windows.Forms.ComboBox cmbPuesto;
+        private System.Windows.Forms.MaskedTextBox mtxtSalario;
     }
 }
 

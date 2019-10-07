@@ -15,6 +15,14 @@ namespace clase_08
         public Form2()
         {
             InitializeComponent();
+            this.Text = "Empresa";
         }
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+
     }
 }
