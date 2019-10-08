@@ -106,7 +106,7 @@ namespace Clase_14
             this.label3.TabIndex = 6;
             this.label3.Text = "Duración:";
             // 
-            // Llamada
+            // frmLlamada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,8 +119,9 @@ namespace Clase_14
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Name = "Llamada";
+            this.Name = "frmLlamada";
             this.Text = "Llamada";
+            this.Load += new System.EventHandler(this.frmLlamada_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

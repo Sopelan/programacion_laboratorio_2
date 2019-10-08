@@ -28,5 +28,10 @@ namespace Clase_14
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void frmLlamada_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
