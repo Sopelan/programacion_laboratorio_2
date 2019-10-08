@@ -13,6 +13,7 @@ namespace Clase_09
         protected byte _cantRuedas;
         protected EMarcas _marca;
         public string Patentes { get { return _patente; } }
+        public EMarcas Marcas { get { return _marca; } }
         public Vehiculo(string patentes,byte cantRuedas,EMarcas marca)
         {
             this._patente = patentes;

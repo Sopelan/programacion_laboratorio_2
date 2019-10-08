@@ -29,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clase_07 incompleto", "clas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clase_08y09", "clase_08\clase_08y09.csproj", "{DB769188-ADA9-436B-A050-834426F37008}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clase_09 incompleto", "Clase_09\clase_09 incompleto.csproj", "{262ED0AE-7B54-4301-97A8-7D2F6D66E9CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clase_09", "Clase_09\clase_09.csproj", "{262ED0AE-7B54-4301-97A8-7D2F6D66E9CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
