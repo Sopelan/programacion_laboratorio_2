@@ -46,7 +46,7 @@ namespace clase_08
             this.rtxtConsola.Items.Clear();
             foreach(Empleado em in empresa.NominaEmpleados)
             {
-                this.rtxtConsola.Items.Add(em.Mostrar());
+                this.rtxtConsola.Items.Add(em.ToString());
             }
                 
         }

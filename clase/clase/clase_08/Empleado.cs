@@ -15,7 +15,6 @@ namespace clase_08
             Sistemas,
             Accionista
         }
-        
         private string _legajo;
         private EPuestoJerarquico _puesto;
         private int _salario;
@@ -38,15 +37,22 @@ namespace clase_08
         {
             return !(e1 == e2);
         }
-        public string Mostrar()
+        protected override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Nombre: " + this._nombre);
-            sb.AppendLine("Apellido: " + this._apellido);
+            sb.Append(base.Mostrar());
             sb.AppendLine("Legajo: " + this._legajo);
-            sb.AppendLine("Puesto: " + this._puesto);
+            sb.AppendLine(this.PosicionSocietaria());
             sb.AppendLine("Salario: $" + this._salario);
             return sb.ToString();
+        }
+        public override string PosicionSocietaria()
+        {
+            return "Empleado de " + _puesto;
+        }
+        public override string ToString()
+        {
+            return this.Mostrar();
         }
 
     }

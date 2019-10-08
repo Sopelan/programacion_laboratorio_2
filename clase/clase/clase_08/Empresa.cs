@@ -47,7 +47,7 @@ namespace clase_08
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("la empresa " + this.RazonSocial + " sita en la calle " + this.Direccion + " cuenta con ganancias por " + this.Ganancias + " y con " + this._nominaEmpleados.Count + "empleados:");
             foreach(Empleado e in this._nominaEmpleados)
-                sb.AppendLine(e.Mostrar());
+                sb.AppendLine(e.ToString());
             return sb.ToString();
         }
     }

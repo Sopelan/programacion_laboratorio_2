@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace clase_08
 {
-    public class Persona
+    public abstract class Persona
     {
         protected string _nombre;
         protected string _apellido;
@@ -16,6 +16,14 @@ namespace clase_08
         {
             this._nombre = nombre;
             this._apellido = apellido;
+        }
+        public abstract string PosicionSocietaria();
+        protected virtual string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Nombre: " + this.Nombre);
+            sb.AppendLine("apellido: " + this.Apellido);
+            return sb.ToString();
         }
     }
 }
