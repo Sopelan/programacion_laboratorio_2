@@ -12,12 +12,7 @@ namespace ejercicio_3._2._3._3
     {
         static void Main(string[] args)
         {
-            float ancho;
-            float alto;
-            float perimetro;
-            float aerea;
-            float diagonal;
-            Console.Read();
+     
 
         }
     }
