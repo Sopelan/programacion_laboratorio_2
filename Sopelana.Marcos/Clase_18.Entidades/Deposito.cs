@@ -59,7 +59,7 @@ namespace Clase_18.Entidades
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Capacidad Máxima: " + this._capacidadMaxima);
-            sb.AppendLine("Listado de " );
+            sb.AppendLine("Listado de " + List.Enumerator);
             foreach(T t in this._lista )
                 sb.AppendLine(t.ToString());
             return sb.ToString();
