@@ -12,11 +12,11 @@ namespace Clase_21.Entidades
     {
         public static bool Serializar(IXml xml)
         {
-            return xml.Guardar("");
+            return xml.Guardar(@"C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Lista de personas.xml");
         }
         public static bool Deserializar(IXml xml , out object obj)
         {
-            return xml.Leer(" ",  out obj);
+            return xml.Leer(@"C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Lista de personas.xml",  out obj);
         }
     }
 }
