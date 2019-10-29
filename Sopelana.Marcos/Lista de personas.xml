@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPersona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Persona>
+    <nombre>juan</nombre>
+    <apellido>perez</apellido>
+    <apodos />
+    <Edad>20</Edad>
+  </Persona>
+  <Persona>
+    <nombre>ricardo</nombre>
+    <apellido>perez</apellido>
+    <apodos />
+    <Edad>23</Edad>
+  </Persona>
+  <Persona>
+    <nombre>eberto</nombre>
+    <apellido>perez</apellido>
+    <apodos />
+    <Edad>25</Edad>
+  </Persona>
+  <Persona>
+    <nombre>martin</nombre>
+    <apellido>beñites</apellido>
+    <apodos />
+    <Edad>24</Edad>
+  </Persona>
+  <Persona>
+    <nombre>juan</nombre>
+    <apellido>campaña</apellido>
+    <apodos />
+    <Edad>22</Edad>
+  </Persona>
+</ArrayOfPersona>

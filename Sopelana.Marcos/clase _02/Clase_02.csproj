@@ -54,10 +54,6 @@
       <Project>{89c7240b-4639-4f41-95db-2122de5d37f6}</Project>
       <Name>Clase_02.Entidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mi_libreria\Mi_libreria.csproj">
-      <Project>{2ecb3185-e6ee-4b0e-98d7-00c91552a047}</Project>
-      <Name>Mi_libreria</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
