@@ -8,6 +8,8 @@ using System.Xml;
 using System.IO;
 namespace Clase_21.Entidades
 {
+    [XmlInclude(typeof(Alumno))]
+    [XmlInclude(typeof(Empleado))]
     public class Persona : IXml
     {
         public string nombre;
@@ -16,7 +18,7 @@ namespace Clase_21.Entidades
         private List<string> apodo;
         public List<string> apodos { get { return apodo; } }
         public int Edad { get{return edad;}set { edad = value; } }
-        private Persona()
+        public Persona()
         {
             this.apodo = new List<string>();
         }
@@ -38,7 +40,7 @@ namespace Clase_21.Entidades
         {
             try
             {
-                XmlSerializer xml = new XmlSerializer(typeof(Persona));
+                XmlSerializer xml = new XmlSerializer(typeof(List<Persona>));
                 TextWriter streamWriter = new StreamWriter(texto);
                 xml.Serialize(streamWriter, this);
                 Console.WriteLine(this.ToString());
@@ -57,7 +59,7 @@ namespace Clase_21.Entidades
         {
             try
             {
-                XmlSerializer xml = new XmlSerializer(typeof(Persona));
+                XmlSerializer xml = new XmlSerializer(typeof(List<Persona>));
                 TextReader textReader = new StreamReader(texto);
                 obj = (Persona)xml.Deserialize(textReader);
                 Console.WriteLine(this.ToString());

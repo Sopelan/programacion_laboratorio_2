@@ -15,6 +15,10 @@ namespace Clase_21.Entidades
             this.legajo = legajo;
             this.sueldo = sueldo;
         }
+        public Empleado()
+        {
+
+        }
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

@@ -13,6 +13,10 @@ namespace Clase_21.Entidades
         {
             this.nota = nota;
         }
+        public Alumno()
+        {
+
+        }
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

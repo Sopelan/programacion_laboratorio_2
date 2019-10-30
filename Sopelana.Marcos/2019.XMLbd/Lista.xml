@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPersona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Persona>
+    <nombre>asd</nombre>
+    <apellido>asdd</apellido>
+    <edad>1231</edad>
+  </Persona>
+  <Persona>
+    <nombre>sdss</nombre>
+    <apellido>dfdf2</apellido>
+    <edad>232</edad>
+  </Persona>
+  <Persona>
+    <nombre>marcos</nombre>
+    <apellido>sopelana</apellido>
+    <edad>21</edad>
+  </Persona>
+  <Persona>
+    <nombre>asd</nombre>
+    <apellido>sdsd</apellido>
+    <edad>23</edad>
+  </Persona>
+  <Persona>
+    <nombre>qqq</nombre>
+    <apellido>qqq</apellido>
+    <edad>3</edad>
+  </Persona>
+</ArrayOfPersona>
