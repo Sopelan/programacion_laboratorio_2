@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using System.Xml.Serialization;
+using System.Xml;
+using System.IO;
+using System.Data.SqlClient;
 
 namespace AdminPersonas
 {
@@ -33,12 +37,13 @@ namespace AdminPersonas
             {
                 miPersona = new Persona(txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text));
                 this.DialogResult = DialogResult.OK;
-
+                
             }
             catch(Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }
+
             this.Close();
         }
 

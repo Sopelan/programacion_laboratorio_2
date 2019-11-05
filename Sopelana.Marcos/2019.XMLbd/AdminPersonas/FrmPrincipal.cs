@@ -19,7 +19,7 @@ namespace AdminPersonas
     {
         private List<Persona> lista;
         public List<Persona> Lista{get{return lista;} set { lista = value; } }
-        
+        DataTable TablaPersonas;
         
         public FrmPrincipal()
         {
@@ -27,10 +27,25 @@ namespace AdminPersonas
 
             this.IsMdiContainer = true;
             this.WindowState = FormWindowState.Maximized;
-
+            TablaPersonas = new DataTable("personas");
             this.lista = new List<Persona>();
+            this.cargarDataTable();
         }
-
+        public void cargarDataTable()
+        {
+            SqlConnection sql = new SqlConnection(Properties.Settings.Default.conexion);
+            sql.Open();
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.Connection = sql;
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.CommandText = "SELECT TOP 1000 [id] ,[nombre] ,[apellido],[edad] FROM[personas_bd].[dbo].[personas]";
+            SqlDataReader dataReader;
+            dataReader = sqlCommand.ExecuteReader();
+            this.TablaPersonas.Load(dataReader);
+            sql.Close();
+            sqlCommand.Clone();
+            dataReader.Close();
+        }
         private void cargarArchivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -107,7 +122,7 @@ namespace AdminPersonas
                     StringBuilder sb = new StringBuilder();
                     for (int i = 1; i <= 3;i++)
                     {
-                        sb.Append(dataReader[i].ToString() + " ");
+                        sb.Append(dataReader[i] + " ");
                     }
                     MessageBox.Show(sb.ToString());
                 }
@@ -119,6 +134,32 @@ namespace AdminPersonas
                 MessageBox.Show(exception.Message);
             }
 
+        }
+
+        private void traerTodosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lista.Clear();
+                SqlConnection sql = new SqlConnection(Properties.Settings.Default.conexion);
+                sql.Open();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sql;
+                sqlCommand.CommandType = CommandType.Text;
+                sqlCommand.CommandText = "SELECT TOP 1000 [id] ,[nombre] ,[apellido],[edad] FROM[personas_bd].[dbo].[personas]";
+                SqlDataReader dataReader;
+                dataReader = sqlCommand.ExecuteReader();
+                while (dataReader.Read() != false)
+                {
+                    lista.Add(new Persona(dataReader[1].ToString(), dataReader[2].ToString(), Convert.ToInt32(dataReader[3])));
+                }
+                dataReader.Close();
+                sql.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
     }
 }
