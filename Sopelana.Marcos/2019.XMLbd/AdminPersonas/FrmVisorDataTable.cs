@@ -63,6 +63,7 @@ namespace AdminPersonas
                 {
                     Console.WriteLine(message.Message);
                 }
+                this.dataTable.Rows.Add();
                 this.lstVisor.Items.Clear();
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {

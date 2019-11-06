@@ -45,13 +45,19 @@ namespace AdminPersonas
             this.sqlData.Fill(this.TablaPersonas);
             this.sqlData.InsertCommand = new SqlCommand("INSERT INTO[personas_bd].[dbo].[personas](nombre, apellido, edad) VALUES(@nombre, @apellido, @edad)", this.sql);
             this.sqlData.UpdateCommand = new SqlCommand("UPDATE [personas_bd].[dbo].[personas]" +
-                     "(nombre, apellido, edad) VALUES (@p1, @p2, @p3) where id=@4");
+                     "(nombre, apellido, edad) VALUES (@nombre, @apellido, @edad) where id=@id");
             this.sqlData.DeleteCommand = new SqlCommand("DELETE from [personas_bd].[dbo].[personas]" +
-                " WHERE id=@4");
+                " WHERE id=@id");
             this.sqlData.InsertCommand.Parameters.Add("@nombre",SqlDbType.VarChar,50,"nombre");
             this.sqlData.InsertCommand.Parameters.Add("@apelldio", SqlDbType.VarChar,50,"apellido");
             this.sqlData.InsertCommand.Parameters.Add("@edad", SqlDbType.Int, 4, "edad");
-            
+            this.sqlData.UpdateCommand.Parameters.Add("@nombre", SqlDbType.VarChar, 50, "nombre");
+            this.sqlData.UpdateCommand.Parameters.Add("@apelldio", SqlDbType.VarChar, 50, "apellido");
+            this.sqlData.UpdateCommand.Parameters.Add("@edad", SqlDbType.Int, 4, "edad");
+            this.sqlData.UpdateCommand.Parameters.Add("@id", SqlDbType.Int, 4, "id");
+            this.sqlData.DeleteCommand.Parameters.Add("@id", SqlDbType.Int, 4, "id");
+
+
             //SqlDataReader dataReader;
             //d/ataReader = sqlCommand.ExecuteReader();
             //this.TablaPersonas.Load(dataReader);
