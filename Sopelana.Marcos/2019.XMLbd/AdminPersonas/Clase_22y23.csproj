@@ -57,6 +57,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVisorDataTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisorDataTable.Designer.cs">
+      <DependentUpon>FrmVisorDataTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVisorPersona.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisorDataTable.resx">
+      <DependentUpon>FrmVisorDataTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVisorPersona.resx">
       <DependentUpon>frmVisorPersona.cs</DependentUpon>
@@ -97,9 +106,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\Clase_22.Entidades.csproj">
+    <ProjectReference Include="..\Entidades\Clase_22y23.Entidades.csproj">
       <Project>{d21b510f-38ab-46d4-9791-cfa1dab03604}</Project>
-      <Name>Clase_22.Entidades</Name>
+      <Name>Clase_22y23.Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

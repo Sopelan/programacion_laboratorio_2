@@ -161,5 +161,11 @@ namespace AdminPersonas
                 MessageBox.Show(exception.Message);
             }
         }
+
+        private void dataTableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVisorDataTable frm = new FrmVisorDataTable(this.TablaPersonas);
+            frm.ShowDialog();
+        }
     }
 }
