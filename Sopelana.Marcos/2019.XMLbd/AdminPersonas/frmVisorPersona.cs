@@ -24,7 +24,7 @@ namespace AdminPersonas
             this.lista = persona;
         }
 
-       public virtual void btnAgregar_Click(object sender, EventArgs e)
+        protected virtual void btnAgregar_Click(object sender, EventArgs e)
         {
             frmPersona frm = new frmPersona();
             frm.StartPosition = FormStartPosition.CenterScreen;
@@ -46,7 +46,7 @@ namespace AdminPersonas
 
         }
 
-        public virtual void btnModificar_Click(object sender, EventArgs e)
+        protected virtual void btnModificar_Click(object sender, EventArgs e)
         {
             frmPersona frm = new frmPersona(/*params*/);
             

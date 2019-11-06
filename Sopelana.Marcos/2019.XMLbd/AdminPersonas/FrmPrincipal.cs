@@ -44,8 +44,14 @@ namespace AdminPersonas
             this.sqlData = new SqlDataAdapter(sqlCommand);
             this.sqlData.Fill(this.TablaPersonas);
             this.sqlData.InsertCommand = new SqlCommand("INSERT INTO[personas_bd].[dbo].[personas](nombre, apellido, edad) VALUES(@nombre, @apellido, @edad)", this.sql);
-            this.sqlData.UpdateCommand = new SqlCommand();
-            this.sqlData.DeleteCommand = new SqlCommand();
+            this.sqlData.UpdateCommand = new SqlCommand("UPDATE [personas_bd].[dbo].[personas]" +
+                     "(nombre, apellido, edad) VALUES (@p1, @p2, @p3) where id=@4");
+            this.sqlData.DeleteCommand = new SqlCommand("DELETE from [personas_bd].[dbo].[personas]" +
+                " WHERE id=@4");
+            this.sqlData.InsertCommand.Parameters.Add("@nombre",SqlDbType.VarChar,50,"nombre");
+            this.sqlData.InsertCommand.Parameters.Add("@apelldio", SqlDbType.VarChar,50,"apellido");
+            this.sqlData.InsertCommand.Parameters.Add("@edad", SqlDbType.Int, 4, "edad");
+            
             //SqlDataReader dataReader;
             //d/ataReader = sqlCommand.ExecuteReader();
             //this.TablaPersonas.Load(dataReader);
@@ -175,6 +181,19 @@ namespace AdminPersonas
             this.cargarDataTable();
             FrmVisorDataTable frm = new FrmVisorDataTable(this.TablaPersonas);
             frm.ShowDialog();
+        }
+
+        private void sincronizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.sqlData.Update(TablaPersonas);
+            }
+            catch(Exception message)
+            {
+                MessageBox.Show(message.Message);
+            }
+            
         }
     }
 }

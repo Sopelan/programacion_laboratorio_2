@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using System.Data.SqlClient;
-using AdminPersonas;
 namespace AdminPersonas
 {
     public partial class FrmVisorDataTable : frmVisorPersona
@@ -37,7 +36,7 @@ namespace AdminPersonas
         {
 
         }
-        public override void btnAgregar_Click(object sender, EventArgs e)
+        protected override void btnAgregar_Click(object sender, EventArgs e)
         {
             frmPersona frm = new frmPersona();
             frm.StartPosition = FormStartPosition.CenterScreen;
@@ -76,7 +75,7 @@ namespace AdminPersonas
             //implementar
 
         }
-        public override void btnModificar_Click(object sender, EventArgs e)
+        protected override void btnModificar_Click(object sender, EventArgs e)
         {
             frmPersona frm = new frmPersona(/*params*/);
 
