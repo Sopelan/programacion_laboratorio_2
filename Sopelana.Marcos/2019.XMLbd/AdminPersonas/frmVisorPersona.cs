@@ -24,7 +24,7 @@ namespace AdminPersonas
             this.lista = persona;
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+       public virtual void btnAgregar_Click(object sender, EventArgs e)
         {
             frmPersona frm = new frmPersona();
             frm.StartPosition = FormStartPosition.CenterScreen;
@@ -50,8 +50,6 @@ namespace AdminPersonas
                         Console.WriteLine(message.Message); 
                     }
 
-
-                    this.lista.Add(frm.Persona);
                     this.lstVisor.Items.Clear();
                     for(int i = 0; i < lista.Count;i++)
                     {
@@ -65,7 +63,7 @@ namespace AdminPersonas
 
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        public virtual void btnModificar_Click(object sender, EventArgs e)
         {
             frmPersona frm = new frmPersona(/*params*/);
             
@@ -115,7 +113,7 @@ namespace AdminPersonas
             //implementar
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        protected virtual void btnEliminar_Click(object sender, EventArgs e)
         {
             frmPersona frm = new frmPersona();
             frm.StartPosition = FormStartPosition.CenterScreen;

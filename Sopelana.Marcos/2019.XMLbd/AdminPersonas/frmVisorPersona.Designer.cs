@@ -90,9 +90,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.ListBox lstVisor;
+        protected System.Windows.Forms.Button btnAgregar;
+        protected System.Windows.Forms.Button btnModificar;
+        protected System.Windows.Forms.Button btnEliminar;
     }
 }

@@ -27,9 +27,8 @@ namespace AdminPersonas
 
             this.IsMdiContainer = true;
             this.WindowState = FormWindowState.Maximized;
-            TablaPersonas = new DataTable("personas");
             this.lista = new List<Persona>();
-            this.cargarDataTable();
+            
         }
         public void cargarDataTable()
         {
@@ -164,6 +163,8 @@ namespace AdminPersonas
 
         private void dataTableToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TablaPersonas = new DataTable("personas");
+            this.cargarDataTable();
             FrmVisorDataTable frm = new FrmVisorDataTable(this.TablaPersonas);
             frm.ShowDialog();
         }
