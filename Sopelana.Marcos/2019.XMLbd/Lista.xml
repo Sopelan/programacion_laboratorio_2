@@ -11,13 +11,13 @@
     <edad>21</edad>
   </Persona>
   <Persona>
-    <nombre>asd</nombre>
-    <apellido>sdsd</apellido>
-    <edad>23</edad>
-  </Persona>
-  <Persona>
     <nombre>qqq</nombre>
     <apellido>qqq</apellido>
     <edad>3</edad>
+  </Persona>
+  <Persona>
+    <nombre>wew</nombre>
+    <apellido>wwe</apellido>
+    <edad>12</edad>
   </Persona>
 </ArrayOfPersona>

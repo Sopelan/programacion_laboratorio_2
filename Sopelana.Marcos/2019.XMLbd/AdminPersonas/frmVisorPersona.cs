@@ -31,25 +31,8 @@ namespace AdminPersonas
             frm.ShowDialog();
                 if(frm.DialogResult == DialogResult.OK)
                 {
-                    try
-                    {
-                        string consulta = "INSERT INTO[personas_bd].[dbo].[personas](nombre,apellido,edad) VALUES(@nombre,@apellido,@edad)";
-                        SqlConnection sql = new SqlConnection(Properties.Settings.Default.conexion);
-                        SqlCommand sqlCommand = new SqlCommand(consulta);
-                        sqlCommand.CommandType = CommandType.Text;
-                        sqlCommand.Connection = sql;
-                        sqlCommand.Parameters.AddWithValue("@nombre", frm.Persona.nombre);
-                        sqlCommand.Parameters.AddWithValue("@apellido", frm.Persona.apellido);
-                        sqlCommand.Parameters.AddWithValue("@edad", frm.Persona.edad.ToString());
-                        sql.Open();
-                        sqlCommand.ExecuteNonQuery();
-                        sql.Close();
-                    }
-                    catch(Exception message)
-                    {
-                        Console.WriteLine(message.Message); 
-                    }
 
+                    this.lista.Add(frm.Persona);
                     this.lstVisor.Items.Clear();
                     for(int i = 0; i < lista.Count;i++)
                     {
@@ -77,25 +60,6 @@ namespace AdminPersonas
                 frm.ShowDialog();
                 if(frm.DialogResult == DialogResult.OK)
                 {
-                    try
-                    {
-                        string consulta = "UPDATE [personas_bd].[dbo].[personas](nombre,apellido,edad) SET(@nombre,@apellido,@edad)WHERE id = (@id)";
-                        SqlConnection sql = new SqlConnection(Properties.Settings.Default.conexion);
-                        SqlCommand sqlCommand = new SqlCommand(consulta);
-                        sqlCommand.CommandType = CommandType.Text;
-                        sqlCommand.Connection = sql;
-                        sqlCommand.Parameters.AddWithValue("@nombre", frm.Persona.nombre);
-                        sqlCommand.Parameters.AddWithValue("@apellido", frm.Persona.apellido);
-                        sqlCommand.Parameters.AddWithValue("@edad", frm.Persona.edad.ToString());
-                        sqlCommand.Parameters.AddWithValue("@id",lstVisor.SelectedItem);
-                        sql.Open();
-                        sqlCommand.ExecuteNonQuery();
-                        sql.Close();
-                    }
-                    catch (Exception message)
-                    {
-                        Console.WriteLine(message.Message);
-                    }
                     this.lista[j] = frm.Persona;
                     this.lstVisor.Items.Clear();
                     for (int i = 0; i < lista.Count; i++)

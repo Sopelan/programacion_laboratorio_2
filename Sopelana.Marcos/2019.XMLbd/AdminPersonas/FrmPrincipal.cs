@@ -19,12 +19,13 @@ namespace AdminPersonas
     {
         private List<Persona> lista;
         public List<Persona> Lista{get{return lista;} set { lista = value; } }
+        SqlDataAdapter sqlData;
         DataTable TablaPersonas;
-        
+        SqlConnection sql;
         public FrmPrincipal()
         {
             InitializeComponent();
-
+            sql = new SqlConnection(Properties.Settings.Default.conexion);
             this.IsMdiContainer = true;
             this.WindowState = FormWindowState.Maximized;
             this.lista = new List<Persona>();
@@ -32,18 +33,25 @@ namespace AdminPersonas
         }
         public void cargarDataTable()
         {
-            SqlConnection sql = new SqlConnection(Properties.Settings.Default.conexion);
-            sql.Open();
-            SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.Connection = sql;
-            sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.CommandText = "SELECT TOP 1000 [id] ,[nombre] ,[apellido],[edad] FROM[personas_bd].[dbo].[personas]";
-            SqlDataReader dataReader;
-            dataReader = sqlCommand.ExecuteReader();
-            this.TablaPersonas.Load(dataReader);
-            sql.Close();
-            sqlCommand.Clone();
-            dataReader.Close();
+
+            //sql.Open();
+            SqlCommand sqlCommand = new SqlCommand
+            {
+                Connection = this.sql,
+                CommandType = CommandType.Text,
+                CommandText = "SELECT TOP 1000 [id] ,[nombre] ,[apellido],[edad] FROM[personas_bd].[dbo].[personas]"
+            };
+            this.sqlData = new SqlDataAdapter(sqlCommand);
+            this.sqlData.Fill(this.TablaPersonas);
+            this.sqlData.InsertCommand = new SqlCommand("INSERT INTO[personas_bd].[dbo].[personas](nombre, apellido, edad) VALUES(@nombre, @apellido, @edad)", this.sql);
+            this.sqlData.UpdateCommand = new SqlCommand();
+            this.sqlData.DeleteCommand = new SqlCommand();
+            //SqlDataReader dataReader;
+            //d/ataReader = sqlCommand.ExecuteReader();
+            //this.TablaPersonas.Load(dataReader);
+            //sql.Close();
+            //sqlCommand.Clone();
+            //dataReader.Close();
         }
         private void cargarArchivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -107,7 +115,7 @@ namespace AdminPersonas
         {
             try
             {
-                SqlConnection sql = new SqlConnection(Properties.Settings.Default.conexion);
+                
                 sql.Open();
                 MessageBox.Show("se conecto");
                 SqlCommand sqlCommand = new SqlCommand();
