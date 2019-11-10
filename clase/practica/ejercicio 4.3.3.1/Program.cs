@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/* Ampliar el programa 4.3.2.1, para que el campo "duración" se almacene como minutos y segundos, usando un "struct" anidado que contenga a su vez estos dos campos*/
+/* Ampliar el programa 4.3.2.1, para que el campo "duración" se almacene como minutos y segundos, usando un "struct" anidado que contenga a su vez 
+ * estos dos campos*/
 namespace ejercicio_4._3._3._1
 {
     class Program
@@ -12,8 +13,14 @@ namespace ejercicio_4._3._3._1
         {
             public string titulo;
             public string artista;
-            public int duracion;
+            public Duracion duracion;
             public float tamaño;
+           
+        }
+        struct Duracion
+        {
+            public int minutos;
+            public int segundos;
         }
         static void Main(string[] args)
         {
@@ -39,11 +46,14 @@ namespace ejercicio_4._3._3._1
                             cancion.titulo = Console.ReadLine();
                             Console.WriteLine("ingrese el titulo de la cancion");
                             cancion.artista = Console.ReadLine();
+                            cancion.duracion = new Duracion();
                             Console.WriteLine("ingrese la duracion de la cancion en segundos");
-                            cancion.duracion = Convert.ToInt32(Console.ReadLine());
+                            cancion.duracion.segundos = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("ingrese la duracion de la cancion en minutos");
+                            cancion.duracion.minutos = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("ingrese el tamaño de la cancion en KB");
                             cancion.tamaño = Convert.ToSingle(Console.ReadLine());
-                            Console.WriteLine("Cancion: {0}\nArtista: {1}\nDuracion en segundos: {2}\nTamaño en KB: {3}", cancion.titulo, cancion.artista, cancion.duracion, cancion.tamaño);
+                            Console.WriteLine("Cancion: {0}\nArtista: {1}\nDuracion: {2}:{4}\nTamaño en KB: {3}", cancion.titulo, cancion.artista, cancion.duracion.minutos.ToString("00"), cancion.tamaño, cancion.duracion.segundos.ToString("00"));
                             canciones[cantidad] = cancion;
                             cantidad++;
                         }
@@ -56,8 +66,8 @@ namespace ejercicio_4._3._3._1
                         {
                             for (int i = 0; i < cantidad; i++)
                             {
-                                Console.WriteLine("Cancion: {0}\nArtista: {1}\nDuracion en segundos: {2}\nTamaño en KB: {3}",
-                                    canciones[i].titulo, canciones[i].artista, canciones[i].duracion, canciones[i].tamaño);
+                                Console.WriteLine("Cancion: {0}\nArtista: {1}\nDuracion: {2}:{4}\nTamaño en KB: {3}",
+                                    canciones[i].titulo, canciones[i].artista, canciones[i].duracion.minutos.ToString("00"), canciones[i].tamaño,canciones[i].duracion.segundos.ToString("00"));
                             }
                         }
                         else
@@ -75,8 +85,8 @@ namespace ejercicio_4._3._3._1
                             {
                                 if (buscar == canciones[i].artista || buscar == canciones[i].titulo)
                                 {
-                                    Console.WriteLine("{4}.Cancion: {0}\nArtista: {1}\nDuracion en segundos: {2}\nTamaño en KB: {3}",
-                                        canciones[i].titulo, canciones[i].artista, canciones[i].duracion, canciones[i].tamaño, i + 1);
+                                    Console.WriteLine("{4}.Cancion: {0}\nArtista: {1}\nDuracion: {2}:{5}\nTamaño en KB: {3}",
+                                        canciones[i].titulo, canciones[i].artista, canciones[i].duracion.minutos.ToString("00"), canciones[i].tamaño, i + 1,canciones[i].duracion.segundos.ToString("00"));
                                     flag = true;
                                 }
                                 if (flag == false)
