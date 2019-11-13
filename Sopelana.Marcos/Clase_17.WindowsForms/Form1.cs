@@ -69,5 +69,10 @@ namespace clase_15.WindowsForms
         {
 
         }
+
+        private void comboBoxUbicacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -71,6 +71,7 @@
             this.comboBoxUbicacion.Name = "comboBoxUbicacion";
             this.comboBoxUbicacion.Size = new System.Drawing.Size(182, 21);
             this.comboBoxUbicacion.TabIndex = 3;
+            this.comboBoxUbicacion.SelectedIndexChanged += new System.EventHandler(this.comboBoxUbicacion_SelectedIndexChanged);
             // 
             // labelTexto
             // 
