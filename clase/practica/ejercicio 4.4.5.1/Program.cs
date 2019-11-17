@@ -18,10 +18,11 @@ namespace ejercicio_4._4._5._1
                 Console.WriteLine("escribi la frase {0}", i + 1);
                 frases[i] = Console.ReadLine();
             }
-            do{
+            do
+            {
                 Console.WriteLine("ingrese la frase al buscar");
                 buscar = Console.ReadLine();
-                foreach(string frase in frases)
+                foreach (string frase in frases)
                 {
                     if (frase.IndexOf(buscar) >= 0)
                     {
@@ -32,8 +33,8 @@ namespace ejercicio_4._4._5._1
                 }
                 if (!flag)
                     Console.WriteLine("no existe la frase " + buscar);
-            }while (buscar != "fin");
-            
+            } while (buscar != "fin");
+
         }
     }
 }

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/* Crea una versión del ejercicio 4.4.5.1 en el que, en caso de que alguno de los textos aparezca como subcadena, se avise además si se encuentra exactamente al principio. */
-namespace ejercicio_4._4._5._2
+//  Una variante del ejercicio 4.4.5.2, que no distinga entre mayúsculas y minúsculas a la hora de buscar. 
+namespace ejercicio_4._4._6._1
 {
     class Program
     {
@@ -24,10 +24,10 @@ namespace ejercicio_4._4._5._2
                 buscar = Console.ReadLine();
                 foreach (string frase in frases)
                 {
-                    if (frase.IndexOf(buscar) >= 0)
+                    if (frase.ToLower().IndexOf(buscar.ToLower()) >= 0)
                     {
                         Console.WriteLine("existe la frase " + frase);
-                        if(frase.IndexOf(buscar) == 0)
+                        if (frase.IndexOf(buscar) == 0)
                             Console.WriteLine("esta al principio");
                         flag = true;
                         break;
