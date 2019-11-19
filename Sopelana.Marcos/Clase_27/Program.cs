@@ -14,7 +14,11 @@ namespace Clase_27
             Persona persona = new Persona("daniel", "fernando",22323213);
             PersonaExternaSellada persona2 = new PersonaExternaSellada("daniel", "fernando",23,ESexo.Masculino);
             Console.WriteLine(persona2.ObtenerInfo());
-            
+            List<Persona> personas = Extensora.ObtenerListadoBD();
+            foreach (Persona p in personas)
+            {
+                Console.WriteLine(p.ObtenerInfo());
+            }
             Console.ReadLine();
         }
     }
