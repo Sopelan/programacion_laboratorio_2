@@ -101,6 +101,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_26", "Clase_26\Clase_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_26.WindowsForms", "Clase_26.WindowsForms\Clase_26.WindowsForms.csproj", "{2F18A017-8114-4E13-9682-31E809C4526E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_27.Entidades", "Clase_27.Entidades\Clase_27.Entidades.csproj", "{13FDD9E3-4D71-4CE7-A68E-C8E42310A17D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_27", "Clase_27\Clase_27.csproj", "{2B83DF70-BEC1-4FF2-ABA5-CDC27DDB6577}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -303,6 +307,14 @@ Global
 		{2F18A017-8114-4E13-9682-31E809C4526E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F18A017-8114-4E13-9682-31E809C4526E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F18A017-8114-4E13-9682-31E809C4526E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13FDD9E3-4D71-4CE7-A68E-C8E42310A17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FDD9E3-4D71-4CE7-A68E-C8E42310A17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FDD9E3-4D71-4CE7-A68E-C8E42310A17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FDD9E3-4D71-4CE7-A68E-C8E42310A17D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B83DF70-BEC1-4FF2-ABA5-CDC27DDB6577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B83DF70-BEC1-4FF2-ABA5-CDC27DDB6577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B83DF70-BEC1-4FF2-ABA5-CDC27DDB6577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B83DF70-BEC1-4FF2-ABA5-CDC27DDB6577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
