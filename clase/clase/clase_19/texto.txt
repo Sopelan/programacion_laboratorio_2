@@ -1,0 +1,5 @@
+Nombre: ranma
+apellido: saotome
+Legajo: 12334
+Empleado de Administracion
+Salario: $20000
