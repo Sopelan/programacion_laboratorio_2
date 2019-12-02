@@ -10,6 +10,16 @@ namespace ejercicio_4._4._9._1
     {
         static void Main(string[] args)
         {
+            string frase;
+            string[] frases;
+            Console.WriteLine("ingresar la frase");
+            frase = Console.ReadLine();
+            frases = frase.Split(',');
+            foreach(string s in frases)
+            {
+                Console.WriteLine(s);
+            }
+            Console.ReadLine();
         }
     }
 }
