@@ -16,7 +16,24 @@ namespace Ejercicio_15
     {
         static void Main(string[] args)
         {
-            
+            double num1;
+            double num2;
+            double operacion;
+            string operador;
+            int num;
+            do
+            {
+                Console.WriteLine("Ingrese el numero 1");
+                num1 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("ingrese el numero 2");
+                num2 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("ingrese el operador");
+                operador = Console.ReadLine();
+                operacion = Calculadora.Calcular(num1, num2, operador);
+                Console.WriteLine("{0} {2} {1}: {3}", num1, num2, operador, operacion);
+                Console.WriteLine("quieres continuar n/0");
+                num = Convert.ToInt32(Console.ReadLine());
+            } while (num != 0);
         }
     }
 }
