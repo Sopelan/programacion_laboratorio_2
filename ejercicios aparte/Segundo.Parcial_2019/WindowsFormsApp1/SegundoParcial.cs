@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ENTIDADES.SP;
 namespace SP
 {
     //DESARROLLAR DENTRO DEL NAMESPACE RAIZ ENTIDADES.SP EN UN PROYECTO DE TIPO CLASS LIBRARY
@@ -29,7 +29,7 @@ namespace SP
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Apellido y nombre del alumno...");
+            MessageBox.Show("Sopelana Marcos");
         }
 
         //Crear la siguiente jerarquía de clases:
@@ -133,9 +133,14 @@ namespace SP
         private void btnPunto4_Click(object sender, EventArgs e)
         {
             //implementar estructura de manejo de excepciones
-
-            this.c_duraznos += this._durazno;
-
+            try
+            {
+                this.c_duraznos += this._durazno;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //Si el precio total del cajon supera los 55 pesos, se disparará el evento EventoPrecio. 
@@ -155,21 +160,21 @@ namespace SP
         //Invocar al método ObtenerListadoFrutas.
         private void btnPunto6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(SegundoParcial.ObtenerListadoFrutas());
+            //MessageBox.Show(SegundoParcial.ObtenerListadoFrutas());
         }
 
         //Agregar en la base de datos las frutas del formulario (_manzana, _banana y _durazno).
         //Invocar al metodo AgregarFrutas():bool
         private void btnPunto7_Click(object sender, EventArgs e)
         {
-            if (SegundoParcial.AgregarFrutas(this))
-            {
-                MessageBox.Show("Se agregaron las frutas a la Base de Datos");
-            }
-            else
-            {
-                MessageBox.Show("NO se agregaron las frutas a la Base de Datos");
-            }
+            //if (SegundoParcial.AgregarFrutas(this))
+            //{
+            //    MessageBox.Show("Se agregaron las frutas a la Base de Datos");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("NO se agregaron las frutas a la Base de Datos");
+            //}
         }
 
         //Agregar un método de extensión a la clase Cajon que:
@@ -181,25 +186,25 @@ namespace SP
         //Excepción, si se probocó algún error en la base de datos
         private void btnPunto8_Click(object sender, EventArgs e)
         {
-            //implementar manejo de excepciones
-            if (this.c_manzanas.EliminarFruta(1))
-            {
-                MessageBox.Show("Se ha eliminado la fruta de la base de datos");
-            }
-            else
-            {
-                MessageBox.Show("No se ha eliminado la fruta de la base de datos");
-            }
+            ////implementar manejo de excepciones
+            //if (this.c_manzanas.EliminarFruta(1))
+            //{
+            //    MessageBox.Show("Se ha eliminado la fruta de la base de datos");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No se ha eliminado la fruta de la base de datos");
+            //}
 
-            //implementar manejo de excepciones
-            if (this.c_manzanas.EliminarFruta(1))
-            {
-                MessageBox.Show("Se ha eliminado la fruta de la base de datos");
-            }
-            else
-            {
-                MessageBox.Show("No se ha eliminado la fruta de la base de datos");
-            }
+            ////implementar manejo de excepciones
+            //if (this.c_manzanas.EliminarFruta(1))
+            //{
+            //    MessageBox.Show("Se ha eliminado la fruta de la base de datos");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No se ha eliminado la fruta de la base de datos");
+            //}
 
         }
 

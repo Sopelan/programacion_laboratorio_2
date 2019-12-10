@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ENTIDADES.SP\ENTIDADES.SP.csproj">
+      <Project>{80277ee2-1089-4931-a9a9-b436e2eb80a7}</Project>
+      <Name>ENTIDADES.SP</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
