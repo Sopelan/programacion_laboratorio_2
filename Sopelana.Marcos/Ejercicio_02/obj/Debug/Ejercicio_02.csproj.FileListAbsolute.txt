@@ -12,3 +12,10 @@ D:\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\obj\Debug\Ejercicio_0
 D:\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\obj\Debug\Ejercicio_02.csproj.CoreCompileInputs.cache
 D:\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\obj\Debug\Ejercicio_02.exe
 D:\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\obj\Debug\Ejercicio_02.pdb
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\bin\Debug\Ejercicio_02.exe.config
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\bin\Debug\Ejercicio_02.exe
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\bin\Debug\Ejercicio_02.pdb
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\obj\Debug\Ejercicio_02.csprojAssemblyReference.cache
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\obj\Debug\Ejercicio_02.csproj.CoreCompileInputs.cache
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\obj\Debug\Ejercicio_02.exe
+C:\Users\sopelan1\Desktop\programacion_laboratorio_2\Sopelana.Marcos\Ejercicio_02\obj\Debug\Ejercicio_02.pdb

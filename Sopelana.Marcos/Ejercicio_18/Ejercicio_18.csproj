@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D35BB551-DD28-4865-81A9-19BB7F05A075}</ProjectGuid>
+    <ProjectGuid>{D999EA53-6916-4A13-A343-CAF506431C81}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ejercicio_17</RootNamespace>
-    <AssemblyName>Ejercicio_17</AssemblyName>
+    <RootNamespace>Ejercicio_18</RootNamespace>
+    <AssemblyName>Ejercicio_18</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ejercicio_17.Entidades\Ejercicio_17.Entidades.csproj">
-      <Project>{7fde1795-088c-43d1-acef-b48c7f3bff04}</Project>
-      <Name>Ejercicio_17.Entidades</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
