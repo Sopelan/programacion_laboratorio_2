@@ -1,7 +1,13 @@
-﻿using Entidades.SP;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
-using System.IO;
+
+
 namespace WindowsForms.SP
 {
     public partial class SegundoParcial : Form
@@ -14,19 +20,19 @@ namespace WindowsForms.SP
         private Cartuchera<Lapiz> c_lapices;
         private Cartuchera<Goma> c_gomas;
 
-        //private SqlConnection cn;
-        //private SqlDataAdapter da;
-        //private DataTable dt;
+        private SqlConnection cn;
+        private SqlDataAdapter da;
+        private DataTable dt;
 
         public SegundoParcial()
         {
             InitializeComponent();
 
-            //this.dt = new DataTable("utiles");
-            //this.dt.Columns.Add("id", typeof(int));
-            //this.dt.Columns["id"].AutoIncrement = true;
-            //this.dt.Columns["id"].AutoIncrementSeed = 1;
-            //this.dt.Columns["id"].AutoIncrementStep = 1;
+            this.dt = new DataTable("utiles");
+            this.dt.Columns.Add("id", typeof(int));
+            this.dt.Columns["id"].AutoIncrement = true;
+            this.dt.Columns["id"].AutoIncrementSeed = 1;
+            this.dt.Columns["id"].AutoIncrementStep = 1;
 
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -35,7 +41,7 @@ namespace WindowsForms.SP
 
         private void SegundoParcial_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Sopelana Marcos");
+            MessageBox.Show("Apellido y nombre del alumno...");
         }
 
         //Crear la siguiente jerarquía de clases:
@@ -109,7 +115,7 @@ namespace WindowsForms.SP
                 //Agregar, para la clase CartucheraLlenaException, un método de extensión (InformarNovedad():string)
                 //que retorne el mensaje de error
                 MessageBox.Show(ex.InformarNovedad());
-            }
+            }            
         }
 
         //Si el precio total de la cartuchera supera los 85 pesos, se disparará el evento EventoPrecio. 
@@ -123,14 +129,13 @@ namespace WindowsForms.SP
         private void btnPunto4_Click(object sender, EventArgs e)
         {
             //Asociar manejador de eventos (c_gomas_EventoPrecio) aquí            
-            this.c_gomas.eventoPrecio += new Cartuchera<Goma>.EventoPrecio(c_gomas_EventoPrecio);
-            this.c_gomas += new Goma(false, "Faber-Castell", 31);
 
+            this.c_gomas += new Goma(false, "Faber-Castell", 31);
         }
 
         private void c_gomas_EventoPrecio(object sender, EventArgs e)
         {
-            bool todoOK = Manejadora.Imprimir(((Cartuchera<Goma>)sender).PrecioTotal);//Reemplazar por la llamada al método de clase ImprimirTicket
+            bool todoOK = false;//Reemplazar por la llamada al método de clase ImprimirTicket
 
             if (todoOK)
             {
@@ -145,23 +150,16 @@ namespace WindowsForms.SP
         //configurar el OpenFileDialog, para poder seleccionar el log de tickets
         private void btnVerLog_Click(object sender, EventArgs e)
         {
-            ////titulo -> 'Abrir archivo de tickets'
-            ////directorio por defecto -> Mis documentos
-            ////tipo de archivo (filtro) -> .log
-            ////extensión por defecto -> .log
-            ////nombre de archovo (defecto) -> tickets
-            OpenFileDialog open = new OpenFileDialog();
-            open.Title = "Abrir archivo de tickets";
-            open.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            open.DefaultExt = ".log";
-            open.FileName = "tickets";
+            //titulo -> 'Abrir archivo de tickets'
+            //directorio por defecto -> Mis documentos
+            //tipo de archivo (filtro) -> .log
+            //extensión por defecto -> .log
+            //nombre de archovo (defecto) -> tickets
+
             DialogResult rta = DialogResult.Cancel;//Reemplazar por la llamada al método correspondiente del OpenFileDialog
 
             if (rta == System.Windows.Forms.DialogResult.OK)
             {
-                StreamReader sr = new StreamReader(open.FileName);
-                this.txtVisorTickets.Text = sr.ReadToEnd();
-                sr.Close();
                 //leer el archivo seleccionado por el cliente y mostrarlo en txtVisorTickest
             }
         }
@@ -202,12 +200,12 @@ namespace WindowsForms.SP
         //Tabla - utiles { id(autoincremental - numérico) - marca(cadena) - precio(numérico) - tipo(cadena) }.
         private void btnPunto6_Click(object sender, EventArgs e)
         {
-            ////Configurar el SqlConnection
+            //Configurar el SqlConnection
 
-            ////Configurar el SqlDataAdapter (y su selectCommand)                        
+            //Configurar el SqlDataAdapter (y su selectCommand)                        
 
-            //this.da.Fill(this.dt);
-            //this.dataGridView1.DataSource = this.dt;
+            this.da.Fill(this.dt);
+            this.dataGridView1.DataSource = this.dt;
         }
 
         //Agregar en el dataTable los útiles del formulario (lapiz, goma y sacapunta).
@@ -237,16 +235,16 @@ namespace WindowsForms.SP
         //Sincronizar los cambios (sufridos en el dataTable) con la base de datos
         private void btnPunto10_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    //Sincronizar el SqlDataAdapter con la BD
+            try
+            {
+                //Sincronizar el SqlDataAdapter con la BD
 
-            //    MessageBox.Show("Datos sincronizados!!!");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("No se ha sincronizado!!!\n" + ex.Message);
-            //}
+                MessageBox.Show("Datos sincronizados!!!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se ha sincronizado!!!\n" + ex.Message);
+            }
         }
     }
 }

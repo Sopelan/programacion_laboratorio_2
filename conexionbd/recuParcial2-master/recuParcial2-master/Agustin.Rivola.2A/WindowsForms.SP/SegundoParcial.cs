@@ -1,7 +1,18 @@
-﻿using Entidades.SP;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using Entidades;
+using static Entidades.Lapiz;
 using System.IO;
+
+
+
 namespace WindowsForms.SP
 {
     public partial class SegundoParcial : Form
@@ -14,19 +25,19 @@ namespace WindowsForms.SP
         private Cartuchera<Lapiz> c_lapices;
         private Cartuchera<Goma> c_gomas;
 
-        //private SqlConnection cn;
-        //private SqlDataAdapter da;
-        //private DataTable dt;
+        private SqlConnection cn;
+        private SqlDataAdapter da;
+        private DataTable dt;
 
         public SegundoParcial()
         {
             InitializeComponent();
 
-            //this.dt = new DataTable("utiles");
-            //this.dt.Columns.Add("id", typeof(int));
-            //this.dt.Columns["id"].AutoIncrement = true;
-            //this.dt.Columns["id"].AutoIncrementSeed = 1;
-            //this.dt.Columns["id"].AutoIncrementStep = 1;
+            this.dt = new DataTable("utiles");
+            this.dt.Columns.Add("id", typeof(int));
+            this.dt.Columns["id"].AutoIncrement = true;
+            this.dt.Columns["id"].AutoIncrementSeed = 1;
+            this.dt.Columns["id"].AutoIncrementStep = 1;
 
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -35,7 +46,7 @@ namespace WindowsForms.SP
 
         private void SegundoParcial_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Sopelana Marcos");
+            MessageBox.Show("Rivola Agustin 2A");
         }
 
         //Crear la siguiente jerarquía de clases:
@@ -80,8 +91,8 @@ namespace WindowsForms.SP
             this.c_gomas = new Cartuchera<Goma>(3);
             this.c_utiles = new Cartuchera<Utiles>(2);
 
-            this.c_lapices += new Lapiz(ConsoleColor.Red, ETipoTrazo.Medio, "Faber-Castell", 32.25);
-            this.c_lapices += new Lapiz(ConsoleColor.Blue, ETipoTrazo.Fino, "Paper Mate", 30);
+            this.c_lapices += new Lapiz(ConsoleColor.Red, ETipoTrazo.Medio, "Faber-Castell", 2);
+            this.c_lapices += new Lapiz(ConsoleColor.Blue, ETipoTrazo.Fino, "Paper Mate", 2);
             this.c_lapices += this.lapiz;
 
             this.c_gomas += this.goma;
@@ -108,8 +119,9 @@ namespace WindowsForms.SP
             {
                 //Agregar, para la clase CartucheraLlenaException, un método de extensión (InformarNovedad():string)
                 //que retorne el mensaje de error
+
                 MessageBox.Show(ex.InformarNovedad());
-            }
+            }            
         }
 
         //Si el precio total de la cartuchera supera los 85 pesos, se disparará el evento EventoPrecio. 
@@ -122,15 +134,17 @@ namespace WindowsForms.SP
         //ImprimirTicket (se alojará en la clase Ticketeadora), que retorna un booleano indicando si se pudo escribir o no
         private void btnPunto4_Click(object sender, EventArgs e)
         {
-            //Asociar manejador de eventos (c_gomas_EventoPrecio) aquí            
-            this.c_gomas.eventoPrecio += new Cartuchera<Goma>.EventoPrecio(c_gomas_EventoPrecio);
-            this.c_gomas += new Goma(false, "Faber-Castell", 31);
+            //Asociar manejador de eventos (c_gomas_EventoPrecio) aquí      
+            this.c_gomas.EventoPrecio -= new Cartuchera<Goma>.Precio(c_gomas_EventoPrecio);
+            this.c_gomas.EventoPrecio += new Cartuchera<Goma>.Precio(c_gomas_EventoPrecio);
 
+
+            this.c_gomas += new Goma(false, "Faber-Castell", 31);
         }
 
         private void c_gomas_EventoPrecio(object sender, EventArgs e)
         {
-            bool todoOK = Manejadora.Imprimir(((Cartuchera<Goma>)sender).PrecioTotal);//Reemplazar por la llamada al método de clase ImprimirTicket
+            bool todoOK = Ticketadora.ImprimirTicket(((Cartuchera<Goma>)sender).PrecioTotal);
 
             if (todoOK)
             {
@@ -145,21 +159,24 @@ namespace WindowsForms.SP
         //configurar el OpenFileDialog, para poder seleccionar el log de tickets
         private void btnVerLog_Click(object sender, EventArgs e)
         {
-            ////titulo -> 'Abrir archivo de tickets'
-            ////directorio por defecto -> Mis documentos
-            ////tipo de archivo (filtro) -> .log
-            ////extensión por defecto -> .log
-            ////nombre de archovo (defecto) -> tickets
+            //titulo -> 'Abrir archivo de tickets'
+            //directorio por defecto -> Mis documentos
+            //tipo de archivo (filtro) -> .log
+            //extensión por defecto -> .log
+            //nombre de archovo (defecto) -> tickets
             OpenFileDialog open = new OpenFileDialog();
             open.Title = "Abrir archivo de tickets";
             open.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            //open.Filter = "Archivos log(*.log) | *.log | Todos los archivos(*.*)| *.* ";
             open.DefaultExt = ".log";
             open.FileName = "tickets";
-            DialogResult rta = DialogResult.Cancel;//Reemplazar por la llamada al método correspondiente del OpenFileDialog
+
+            DialogResult rta = open.ShowDialog();
 
             if (rta == System.Windows.Forms.DialogResult.OK)
             {
                 StreamReader sr = new StreamReader(open.FileName);
+
                 this.txtVisorTickets.Text = sr.ReadToEnd();
                 sr.Close();
                 //leer el archivo seleccionado por el cliente y mostrarlo en txtVisorTickest
@@ -202,18 +219,45 @@ namespace WindowsForms.SP
         //Tabla - utiles { id(autoincremental - numérico) - marca(cadena) - precio(numérico) - tipo(cadena) }.
         private void btnPunto6_Click(object sender, EventArgs e)
         {
-            ////Configurar el SqlConnection
+            //Configurar el SqlConnection
+            //Configurar el SqlDataAdapter (y su selectCommand)    
 
-            ////Configurar el SqlDataAdapter (y su selectCommand)                        
+            this.cn = new SqlConnection(Properties.Settings.Default.Conexion);
+            this.da = new SqlDataAdapter("SELECT * FROM utiles",this.cn);
+            this.IsMdiContainer = true;
+           
+            this.da.Fill(this.dt);
 
-            //this.da.Fill(this.dt);
-            //this.dataGridView1.DataSource = this.dt;
+            this.dataGridView1.DataSource = this.dt;
         }
 
         //Agregar en el dataTable los útiles del formulario (lapiz, goma y sacapunta).
         private void btnPunto7_Click(object sender, EventArgs e)
         {
             //Configurar el insertCommand del SqlDataAdapter y sus parametros
+            this.da.InsertCommand = new SqlCommand("INSERT INTO utiles(marca,precio,tipo) values(@marca,@precio,@tipo)",cn);
+            this.da.InsertCommand.Parameters.Add("@marca",SqlDbType.VarChar,50,"marca");
+            this.da.InsertCommand.Parameters.Add("@precio", SqlDbType.Float,1000000000, "precio");
+            this.da.InsertCommand.Parameters.Add("@tipo", SqlDbType.VarChar, 50, "tipo");
+
+            DataRow fLapiz = dt.NewRow();
+            DataColumnCollection columnas = dt.Columns;
+            fLapiz[columnas[1]] = this.lapiz.marca;
+            fLapiz[columnas[2]] = this.lapiz.precio;
+            fLapiz[columnas[3]] = this.lapiz.trazo.ToString();
+            dt.Rows.Add(fLapiz);
+            DataRow fGoma = dt.NewRow();
+            fGoma[columnas[1]] = this.goma.marca;
+            fGoma[columnas[2]] = this.goma.precio;
+            fGoma[columnas[3]] = this.goma.soloLapiz.ToString();
+            dt.Rows.Add(fGoma);
+            DataRow fSacapunta = dt.NewRow();
+            fSacapunta[columnas[1]] = this.sacapunta.marca;
+            fSacapunta[columnas[2]] = this.sacapunta.precio;
+            fSacapunta[columnas[3]] = this.sacapunta.deMetal.ToString();
+            dt.Rows.Add(fSacapunta);
+
+            this.dataGridView1.DataSource = this.dt;
 
             //Agregar los utiles del formulario al dataTable
         }
@@ -222,31 +266,47 @@ namespace WindowsForms.SP
         private void btnPunto8_Click(object sender, EventArgs e)
         {
             //Configurar el deleteCommand del SqlDataAdapter y sus parametros
-
             //Borrar el primer registro del dataTable
+            this.da.DeleteCommand = new SqlCommand("delete from utiles where id=@id",cn);
+            this.da.DeleteCommand.Parameters.Add("@id", SqlDbType.Int,2, "id");
+            this.dt.Rows[0].Delete();
         }
 
         //Modificar del dataTable el ultimo registro, cambiarlo por: marca:barrilito; precio:72
         private void btnPunto9_Click(object sender, EventArgs e)
         {
             //Configurar el updateCommand del SqlDataAdapter y sus parametros
+            da.UpdateCommand = new SqlCommand("update utiles set marca=@marca,precio=@precio,tipo=@tipo where id=@id", cn);
+            da.UpdateCommand.Parameters.Add("@marca", SqlDbType.VarChar, 50, "marca");
+            da.UpdateCommand.Parameters.Add("@precio", SqlDbType.VarChar, 50, "precio");
+            da.UpdateCommand.Parameters.Add("@tipo", SqlDbType.Int, 2, "tipo");
+            da.UpdateCommand.Parameters.Add("@id", SqlDbType.Int, 2, "id");
 
             //Modificar el ultimo registro del dataTable
+            DataColumnCollection columna = dt.Columns;
+            DataRow fila = dt.Rows[dt.Rows.Count-1];
+            fila[columna[1]] = "barrilito";
+            fila[columna[2]] = 72;
+
+
+
+            
+
         }
 
         //Sincronizar los cambios (sufridos en el dataTable) con la base de datos
         private void btnPunto10_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    //Sincronizar el SqlDataAdapter con la BD
-
-            //    MessageBox.Show("Datos sincronizados!!!");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("No se ha sincronizado!!!\n" + ex.Message);
-            //}
+            try
+            {
+                //Sincronizar el SqlDataAdapter con la BD
+                this.da.Update(dt);
+                MessageBox.Show("Datos sincronizados!!!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se ha sincronizado!!!\n" + ex.Message);
+            }
         }
     }
 }

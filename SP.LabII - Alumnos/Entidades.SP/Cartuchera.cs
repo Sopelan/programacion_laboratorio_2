@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 //Crear la clase Cartuchera<T> -> restringir para que solo lo pueda usar Utiles o clases que deriven de Utiles
 //atributos: capacidad:int y elementos:List<T> (todos protegidos)        
 //Propiedades
@@ -22,7 +23,7 @@ namespace Entidades.SP
     {
         protected int capacidad;
         protected List<T> elementos;
-        public delegate void EventoPrecio(double precio, EventArgs e);
+        public delegate void EventoPrecio(Cartuchera<T> c ,EventArgs e);
         public event EventoPrecio eventoPrecio;
 
         public List<T> Elementos
@@ -48,7 +49,6 @@ namespace Entidades.SP
         public Cartuchera()
         {
             this.elementos = new List<T>();
-            this.eventoPrecio += Manejadora.Imprimir;
         }
         public Cartuchera(int capacidad):this()
         {
@@ -61,7 +61,7 @@ namespace Entidades.SP
             {
                 cartuchera.elementos.Add(t);
                 if (cartuchera.PrecioTotal > 85)
-                    cartuchera.eventoPrecio(cartuchera.PrecioTotal, EventArgs.Empty);
+                    cartuchera.eventoPrecio(cartuchera,new EventArgs());
             }
             else
                  throw new CartucheraLlenaException();
