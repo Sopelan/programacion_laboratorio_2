@@ -10,7 +10,8 @@ namespace ejercicio_5._3._3
     {
         static void Main(string[] args)
         {
-
+            Rectangulo(2, 3, 'f');
+            Console.ReadLine();
         }
         static void Rectangulo(int x ,int y, char letra)
         {
