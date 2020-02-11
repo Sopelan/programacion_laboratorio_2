@@ -19,8 +19,15 @@ namespace ejercicio_5._9._2._1
                 Console.WriteLine("Error!!!! ingrese el numero");
                 flag = double.TryParse(Console.ReadLine(), out num);
             }
-            raizNum = Math.Sqrt(num);
-            Console.WriteLine("La raiz cuadrada de {0} es {1}", num, raizNum);
+            Console.WriteLine("ingrese la raiz");
+            flag = int.TryParse(Console.ReadLine(), out int indice);
+            while (flag == false)
+            {
+                Console.WriteLine("Error!!!! ingrese la raiz");
+                flag = int.TryParse(Console.ReadLine(), out indice);
+            }
+            raizNum = Math.Pow(num,1d/indice);
+            Console.WriteLine("La raiz {2} de {0} es {1}", num, raizNum,indice);
             Console.ReadLine();
         }
     }
