@@ -10,15 +10,17 @@ namespace ejercicio_5._10._7
     {
         static void Main(string[] args)
         {
-            string cadena = "Me Cojo a tu mama";
+            string cadena = "DABALEARROZALAZORRAELABAD";
             string anedac = "";
-            bool verdad = Recursividad(cadena,ref anedac, cadena.Length - 1);
+            bool verdad = Interativa(cadena,ref anedac);
             Console.WriteLine("Es verdad que esta {0} y esta {1} son iguales? {2}",cadena,anedac, verdad);
             Console.ReadLine();
 
         }
         static bool Recursividad(string cadena,ref string anedac, int i)
         {
+            if (i == cadena.Length - 1 && anedac != "")
+                return false;
             if (i >= 0)
             {
                 anedac += cadena[i];
@@ -30,7 +32,11 @@ namespace ejercicio_5._10._7
         }
         static bool Interativa(string cadena, ref string anedac)
         {
-           
+            if (anedac != "")
+                return false;
+            for (int i = cadena.Length - 1; i >= 0; i--) 
+                anedac += cadena[i];
+            return cadena == anedac;
         }
     }
 }
